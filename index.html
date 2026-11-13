@@ -30,7 +30,12 @@
   h1, h2, h3, p { margin: 0; }
   :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
   .on-dark :focus-visible, .dark :focus-visible, #contact :focus-visible, footer :focus-visible { outline-color: var(--tan); }
-  .poly { background-color: #fff; background-image: var(--poly); background-size: 600px 400px; }
+  /* one fixed backdrop for every device: a fixed layer, not background-attachment (which phones ignore) */
+  body::before {
+    content: ""; position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100vh; height: 100lvh;
+    background: #fff var(--poly) 0 0 / 600px 400px; pointer-events: none;
+  }
+  .poly { background: transparent; }
 
   /* ---------- header ---------- */
   .top {
