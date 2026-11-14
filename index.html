@@ -538,34 +538,24 @@
     }
   }
 
-  /* ---------- tape scale: a tick every 1 cm, a long tick and a reading every 5 cm, from 0 cm to 100 cm ---------- */
+  /* ---------- tape scale: a tick every 1 cm, a long tick and a reading every 10 cm, from 0 cm to 100 cm ---------- */
   ::-webkit-scrollbar { width: 14px; height: 14px; }
   ::-webkit-scrollbar-track {
     border-left: 1px solid #2C2C2C;
     background:
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E0 cm%3C/text%3E%3C/svg%3E") right 1px top 0% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E5 cm%3C/text%3E%3C/svg%3E") right 1px top 5% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E10 cm%3C/text%3E%3C/svg%3E") right 1px top 10% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E15 cm%3C/text%3E%3C/svg%3E") right 1px top 15% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E20 cm%3C/text%3E%3C/svg%3E") right 1px top 20% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E25 cm%3C/text%3E%3C/svg%3E") right 1px top 25% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E30 cm%3C/text%3E%3C/svg%3E") right 1px top 30% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E35 cm%3C/text%3E%3C/svg%3E") right 1px top 35% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E40 cm%3C/text%3E%3C/svg%3E") right 1px top 40% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E45 cm%3C/text%3E%3C/svg%3E") right 1px top 45% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E50 cm%3C/text%3E%3C/svg%3E") right 1px top 50% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E55 cm%3C/text%3E%3C/svg%3E") right 1px top 55% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E60 cm%3C/text%3E%3C/svg%3E") right 1px top 60% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E65 cm%3C/text%3E%3C/svg%3E") right 1px top 65% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E70 cm%3C/text%3E%3C/svg%3E") right 1px top 70% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E75 cm%3C/text%3E%3C/svg%3E") right 1px top 75% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E80 cm%3C/text%3E%3C/svg%3E") right 1px top 80% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E85 cm%3C/text%3E%3C/svg%3E") right 1px top 85% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E90 cm%3C/text%3E%3C/svg%3E") right 1px top 90% / 7px 24px no-repeat,
-      url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E95 cm%3C/text%3E%3C/svg%3E") right 1px top 95% / 7px 24px no-repeat,
       url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%227%22 height=%2224%22 viewBox=%220 0 7 24%22%3E%3Ctext transform=%22translate%286 12%29 rotate%28-90%29%22 text-anchor=%22middle%22 font-family=%22Arial%2C Helvetica%2C sans-serif%22 font-size=%226.5%22 font-weight=%22700%22 fill=%22%23D1A57A%22%3E100 cm%3C/text%3E%3C/svg%3E") right 1px top 100% / 7px 24px no-repeat,
       linear-gradient(rgba(209, 165, 122, .95), rgba(209, 165, 122, .95)) left bottom / 5px 1px no-repeat,
-      linear-gradient(to bottom, rgba(209, 165, 122, .95) 0 1px, transparent 1px) left top / 5px 5% repeat-y,
+      linear-gradient(to bottom, rgba(209, 165, 122, .95) 0 1px, transparent 1px) left top / 5px 10% repeat-y,
       linear-gradient(to bottom, rgba(209, 165, 122, .5) 0 1px, transparent 1px) left top / 3px 1% repeat-y,
       #0B0B0B;
   }
@@ -861,6 +851,64 @@
 
   /* ---------- lighter headings on the cutting stage and the contact section; the gold words behind are unchanged ---------- */
   .cap h2.head, #contact .head { font-weight: 300; }
+
+  /* ---------- home: a fine line above the tagline, the flag on the right ---------- */
+  .feat-top { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: clamp(1.25rem, 5vw, 5rem); }
+  .feat-text { flex: 1; min-width: 0; }
+  .feat-line { display: block; height: 1px; width: min(22rem, 100%); margin-bottom: clamp(1.25rem, 2.5vw, 2rem); background: linear-gradient(to right, rgba(209, 165, 122, .7), rgba(209, 165, 122, 0)); }
+  .feat-top > .flag { flex: none; height: auto; width: clamp(5.5rem, 17vw, 15rem); }
+  @media (max-width: 700px) { .feat-top { flex-direction: row; align-items: center; } .feat-top > .flag { width: 5.5rem; height: auto; } }
+
+  /* the flag's top edge sits on the line; the line runs from the flag and fades out to the left */
+  .feat-top, .feat-top[class] { align-items: flex-start; }
+  .feat-line { width: 100%; background: linear-gradient(to left, rgba(209, 165, 122, .85), rgba(209, 165, 122, 0)); }
+  .feat-top > .flag { align-self: flex-start; }
+  .feat-top, .feat-top[class] { gap: clamp(1.4625rem, 3.12vw, 2.4375rem); }   /* space between the line and the flag */
+  /* line and flag sit half as far above the text; the text itself stays where it was */
+  .feat-top { padding-top: clamp(.625rem, 1.25vw, 1rem); }
+  .feat-line, .feat-text .feat-line { margin-bottom: clamp(.625rem, 1.25vw, 1rem); }
+  .feat-text .feat-head { padding-right: clamp(1rem, 3vw, 2.5rem); }
+  @media (max-width: 700px) { .feat-top { align-items: flex-start; gap: 1.4625rem; } }
+
+  /* hero: "From Earth." smaller and white under "Raw" */
+  .cap[data-cap="hero"] h1 br { display: none; }
+  .cap[data-cap="hero"] h1 span { display: block; font-size: .5em; line-height: 1.15; color: #fff; letter-spacing: 0; margin-top: .12em; }
+  /* projects: the material is shown as a tag, like the formats in the collection */
+  .wrap .jmat { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem .55rem; margin-top: .75rem; font-size: .6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; line-height: 1; color: var(--mute); }
+  .jmat a, .jmat a:hover { border-bottom: 0; }
+  .jmat a { color: var(--tan); background: rgba(209, 165, 122, .14); padding: .32rem .5rem; border-radius: 2px; text-decoration: none; transition: background .2s, box-shadow .2s; }
+  .jmat a:hover, .jmat a:focus-visible { background: rgba(209, 165, 122, .26); box-shadow: 0 0 0 1px rgba(209, 165, 122, .55); }
+  /* ---------- header menu on small screens: a blurred glass panel with numbered pages ---------- */
+  @media (max-width: 820px) {
+    .top nav, .top.open nav {
+      display: flex; flex-direction: column; align-items: stretch; gap: 0;
+      position: absolute; top: 100%; left: 0; right: 0;
+      padding: 0 var(--pad);   /* no extra space above the first page or below the last, so all four rows are the same height */
+      max-height: calc(100vh - 100%); max-height: calc(100dvh - 100%); overflow-y: auto;
+      background: rgba(6, 6, 6, .8);
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--grey);
+      counter-reset: page;
+      visibility: hidden; opacity: 0; transform: translateY(-.35rem);
+      transition: opacity .2s, transform .2s, visibility 0s .2s;
+    }
+    .top.open nav { visibility: visible; opacity: 1; transform: none; transition-delay: 0s; }
+    #nav a {
+      display: flex; align-items: baseline; gap: 1.1rem;
+      padding: 1rem 0; border-top: 1px solid var(--grey);
+      font-size: clamp(1.17rem, 4.86vw, 1.35rem); font-weight: 300; letter-spacing: .06em; line-height: 1.15; white-space: normal;
+    }
+    #nav a:first-child { border-top: 1px solid transparent; }
+    #nav a::before { counter-increment: page; content: ".0" counter(page); flex: none; width: 1.6rem; font-size: .75rem; font-weight: 600; letter-spacing: .14em; color: var(--tan); opacity: .8; }
+    #nav a[aria-current="page"], #nav a:active { color: var(--tan); }
+    /* the page behind dims and softens while the menu is open; tapping it closes the menu */
+    .top::after { content: ""; position: fixed; inset: 0; z-index: -1; background: rgba(0, 0, 0, .55); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); opacity: 0; pointer-events: none; transition: opacity .25s; }
+    .top.open::after { opacity: 1; pointer-events: auto; }
+  }
+  @media (max-width: 820px) and (prefers-reduced-motion: reduce) {
+    .top nav, .top.open nav { transform: none; transition: none; }
+    .top::after { transition: none; }
+  }
 </style>
 </head>
 <body data-view="home">
@@ -884,7 +932,7 @@
       <canvas id="gl" aria-hidden="true"></canvas>
 
       <div class="cap" data-cap="hero">
-        <h1>Raw<br>From Earth.</h1>
+        <h1>Raw<br><span>From Earth.</span></h1>
         <p>Transforming nature's finest treasures into timeless masterpieces.</p>
         <a class="btn" href="#/collection">Collection</a>
       </div>
@@ -925,8 +973,11 @@
   <!-- home: four marbles from the collection -->
   <section id="featured" class="wrap poly">
     <div class="feat-top rise">
-      <div class="feat-mark"><img class="flag" data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/flag-new.png" width="2785" height="900" alt="Greek flag" decoding="async"><span></span></div>
-      <h2 class="feat-head">Giving a different approach to <span>Greek Marble</span></h2>
+      <div class="feat-text">
+        <span class="feat-line" aria-hidden="true"></span>
+        <h2 class="feat-head">Giving a different approach to <span>Greek Marble</span></h2>
+      </div>
+      <img class="flag" data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/flag-new.png" width="2785" height="900" alt="Greek flag" decoding="async">
     </div>
     <ul class="pgrid">
       <li class="rise"><a class="pcard" href="#/product/thassos-white">
@@ -1063,14 +1114,14 @@
         <span class="pname">Crystalina Vein</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#/product/vratsa">
-        <span class="sw"><canvas data-i="14" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/vratsa-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/vratsa-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/vratsa-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/vratsa-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
-        <span class="pname">Vratsa</span>
-        <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
-      </a></li>
       <li class="rise"><a class="pcard" href="#/product/perla">
         <span class="sw"><canvas data-i="13" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/perla-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/perla-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/perla-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/perla-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Perla</span>
+        <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
+      </a></li>
+      <li class="rise"><a class="pcard" href="#/product/vratsa">
+        <span class="sw"><canvas data-i="14" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/vratsa-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/vratsa-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/vratsa-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/vratsa-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
+        <span class="pname">Vratsa</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
       <li class="rise"><a class="pcard" href="#/product/nestos">
@@ -1118,84 +1169,84 @@
         <span class="num">.01</span>
         <h3 class="jname"><a href="#/project/aliathon-ionian">Aliathon Ionian</a></h3>
         <p class="jloc">Paphos, Cyprus</p>
-        <p class="jmat">Material: <a href="#/product/crystalina">Crystalina</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/crystalina">Crystalina</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/OGUZ-HAN-UNIVERSITY-TURKMENISTAN.png" data-slug="oguz-han-university">
         <a class="ph" href="#/project/oguz-han-university" aria-label="Oguz Han University"><span class="ghostnum" aria-hidden="true">.02</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/OGUZ-HAN-UNIVERSITY-TURKMENISTAN.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.02</span>
         <h3 class="jname"><a href="#/project/oguz-han-university">Oguz Han University</a></h3>
         <p class="jloc">Ashgabat, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/CYPRUS-UNIVERSITY-OF-TECHNOLOGY.png" data-slug="university-of-technology">
         <a class="ph" href="#/project/university-of-technology" aria-label="University of Technology"><span class="ghostnum" aria-hidden="true">.03</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/CYPRUS-UNIVERSITY-OF-TECHNOLOGY.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.03</span>
         <h3 class="jname"><a href="#/project/university-of-technology">University of Technology</a></h3>
         <p class="jloc">Paphos, Cyprus</p>
-        <p class="jmat">Material: <a href="#/product/kavala-vein">Kavala Vein</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/kavala-vein">Kavala Vein</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/DASHOGUZ-MOSQUE-TURKMENISTAN.png" data-slug="dashoguz-mosque">
         <a class="ph" href="#/project/dashoguz-mosque" aria-label="Dashoguz Mosque"><span class="ghostnum" aria-hidden="true">.04</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/DASHOGUZ-MOSQUE-TURKMENISTAN.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.04</span>
         <h3 class="jname"><a href="#/project/dashoguz-mosque">Dashoguz Mosque</a></h3>
         <p class="jloc">Dashoguz, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/TRILOGY-LIMASSOL-CYPRUS.png" data-slug="trilogy">
         <a class="ph" href="#/project/trilogy" aria-label="Trilogy"><span class="ghostnum" aria-hidden="true">.05</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/TRILOGY-LIMASSOL-CYPRUS.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.05</span>
         <h3 class="jname"><a href="#/project/trilogy">Trilogy</a></h3>
         <p class="jloc">Limassol, Cyprus</p>
-        <p class="jmat">Material: <a href="#/product/thassos-vein">Thassos Vein</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-vein">Thassos Vein</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/museum.jpg" data-slug="archaeological-museum">
         <a class="ph" href="#/project/archaeological-museum" aria-label="Archaeological Museum"><span class="ghostnum" aria-hidden="true">.06</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/museum.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.06</span>
         <h3 class="jname"><a href="#/project/archaeological-museum">Archaeological Museum</a></h3>
         <p class="jloc">Nicosia, Cyprus</p>
-        <p class="jmat">Material: <a href="#/product/kavala">Kavala</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/kavala">Kavala</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/al-haram.jpg" data-slug="al-haram-mosque">
         <a class="ph" href="#/project/al-haram-mosque" aria-label="Al-Haram Mosque"><span class="ghostnum" aria-hidden="true">.07</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/al-haram.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.07</span>
         <h3 class="jname"><a href="#/project/al-haram-mosque">Al-Haram Mosque</a></h3>
         <p class="jloc">Mecca, Saudi Arabia</p>
-        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/alem.jpg" data-slug="alem-cultural-center">
         <a class="ph" href="#/project/alem-cultural-center" aria-label="Alem Cultural Center"><span class="ghostnum" aria-hidden="true">.08</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/alem.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.08</span>
         <h3 class="jname"><a href="#/project/alem-cultural-center">Alem Cultural Center</a></h3>
         <p class="jloc">Ashgabat, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/mahabat.jpg" data-slug="mahabat-monument">
         <a class="ph" href="#/project/mahabat-monument" aria-label="Mahabat Monument"><span class="ghostnum" aria-hidden="true">.09</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/mahabat.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.09</span>
         <h3 class="jname"><a href="#/project/mahabat-monument">Mahabat Monument</a></h3>
         <p class="jloc">Ashgabat, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/ruhy.jpg" data-slug="turkmenbashi-ruhy-mosque">
         <a class="ph" href="#/project/turkmenbashi-ruhy-mosque" aria-label="Turkmenbashi Ruhy Mosque"><span class="ghostnum" aria-hidden="true">.10</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/ruhy.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.10</span>
         <h3 class="jname"><a href="#/project/turkmenbashi-ruhy-mosque">Turkmenbashi Ruhy Mosque</a></h3>
         <p class="jloc">Turkmenbashi, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/seyit.jpg" data-slug="seyit-jemaletdin-mosque">
         <a class="ph" href="#/project/seyit-jemaletdin-mosque" aria-label="Seyit Jemaletdin Mosque"><span class="ghostnum" aria-hidden="true">.11</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/seyit.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.11</span>
         <h3 class="jname"><a href="#/project/seyit-jemaletdin-mosque">Seyit Jemaletdin Mosque</a></h3>
         <p class="jloc">Annau, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/arkadog.jpg" data-slug="grand-mosque-of-arkadog">
         <a class="ph" href="#/project/grand-mosque-of-arkadog" aria-label="Grand Mosque of Arkadog"><span class="ghostnum" aria-hidden="true">.12</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/arkadog.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.12</span>
         <h3 class="jname"><a href="#/project/grand-mosque-of-arkadog">Grand Mosque of Arkadog</a></h3>
         <p class="jloc">Arkadog, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
+        <p class="jmat"><span>Material</span> <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
     </ul>
   </section>
@@ -1543,9 +1594,11 @@
   /* ---------- pages: the address after "#" picks the page ---------- */
   const TITLES = { home: 'Kouklas Marble | Greek marble supplier', about: 'About', collection: 'Collection', projects: 'Projects', contact: 'Contact us', terms: 'Terms of use', privacy: 'Privacy policy' };
   const topEl = $('.top'), menuBtn = $('.menu');
-  menuBtn.addEventListener('click', () => {
-    menuBtn.setAttribute('aria-expanded', String(topEl.classList.toggle('open')));
-  });
+  const setMenu = on => { topEl.classList.toggle('open', on); menuBtn.setAttribute('aria-expanded', String(on)); };
+  menuBtn.addEventListener('click', () => setMenu(!topEl.classList.contains('open')));
+  // tapping the dimmed page behind the menu, or pressing Escape, closes it
+  topEl.addEventListener('click', e => { if (e.target === topEl) setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && topEl.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
   function route() {
     const h = location.hash.replace(/^#\/?/, '');
     if (h.startsWith('product/')) {
@@ -1643,7 +1696,7 @@
   const FS = `
     precision highp float;
     varying vec3 vTex, vN, vW, vL, vF;
-    uniform sampler2D uTexA, uTexB; uniform float uMix, uUseTex;
+    uniform sampler2D uTexA, uTexB; uniform float uMix, uUseTex, uFace, uOwn;
     uniform vec3 uCam, uSize, uBase, uSeed; uniform vec4 uCloud, uV1, uV2, uBand; uniform float uEdge, uMode, uAlpha;
     float hash(vec3 p){ p = fract(p * 0.3183099 + 0.1); p *= 17.0; return fract(p.x * p.y * p.z * (p.x + p.y + p.z)); }
     float noise(vec3 x){
@@ -1666,6 +1719,13 @@
       col = mix(col, uV2.rgb, v2 * uV2.a);
       return col;
     }
+    vec3 photo(vec2 p){ p = p / 2.4 + 0.5; return mix(texture2D(uTexA, p).rgb, texture2D(uTexB, p).rgb, uMix); }
+    // an edge face, 'dep' deep behind the big face it belongs to
+    vec3 edgePhoto(float dep){
+      if (abs(vF.z) > 0.5) return photo(vec2(vTex.z - sign(vF.z) * dep, vTex.y));
+      float m = 1.2 - vTex.z, sy = sign(vF.y);   // near the front edge the top follows the front face instead, mitred along the diagonal
+      return photo(m > dep ? vec2(vTex.z, vTex.y - sy * dep) : vec2(1.2 - dep, vTex.y - sy * m));
+    }
     void main(){
       if (uMode > 1.5) { gl_FragColor = vec4(marble(vTex), 1.0); return; }
       if (uMode > 0.5) {
@@ -1680,11 +1740,10 @@
       float d = max(dot(n, l), 0.0);
       vec3 alb;
       if (uUseTex > 0.5) {
-        // the product photograph, projected onto whichever face of the block this is
-        vec3 an = abs(vF);
-        vec2 uv = an.x > 0.5 ? vTex.zy : (an.y > 0.5 ? vTex.zx + vTex.y * 0.35 : vTex.xy + vTex.z * 0.35);
-        uv = uv / 2.4 + 0.5;
-        alb = mix(texture2D(uTexA, uv).rgb, texture2D(uTexB, uv).rgb, uMix);
+        // the product photograph: the big faces show it straight on; every edge face picks it up from the edge it shares
+        // with the big face and carries it inwards, so the veins meet along the edges of the block, of each slab and of each tile
+        if (abs(vF.x) > 0.5) alb = photo(vTex.zy);
+        else alb = mix(edgePhoto(0.8 - vTex.x), edgePhoto(uFace - vTex.x), uOwn);
       } else {
         alb = marble(vTex);
       }
@@ -1710,7 +1769,7 @@
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) console.error(gl.getProgramInfoLog(prog));
   gl.useProgram(prog);
   const U = {};
-  for (const n of ['uVP', 'uModel', 'uSize', 'uOrigin', 'uShift', 'uCam', 'uEdge', 'uMode', 'uAlpha', 'uBase', 'uSeed', 'uCloud', 'uV1', 'uV2', 'uBand', 'uTexA', 'uTexB', 'uMix', 'uUseTex']) U[n] = gl.getUniformLocation(prog, n);
+  for (const n of ['uVP', 'uModel', 'uSize', 'uOrigin', 'uShift', 'uCam', 'uEdge', 'uMode', 'uAlpha', 'uBase', 'uSeed', 'uCloud', 'uV1', 'uV2', 'uBand', 'uTexA', 'uTexB', 'uMix', 'uUseTex', 'uFace', 'uOwn']) U[n] = gl.getUniformLocation(prog, n);
 
   // unit cube with normals
   const verts = [];
@@ -1879,7 +1938,8 @@
     setCap(caps.slabs, o1, (1 - o1) * 30 * (s < 1 ? 1 : -1));
     setCap(caps.tiles, o2, (1 - o2) * 30 * (s < 2 ? 1 : -1));
     setCap(caps.cut, o3, (1 - o3) * 30);
-    rail.style.setProperty('--fill', (prod ? 1 / 6 + (s - 1) / 3 : 0.125 + s / 4).toFixed(3));
+    // the bar fills the whole column of the stage on show, so it reaches the end at cut to size
+    rail.style.setProperty('--fill', (prod ? s / 3 : (s + 1) / 4).toFixed(3));
     const active = Math.round(s);
     railItems.forEach((li, i) => li.classList.toggle('on', i === active));
     hint.style.opacity = (1 - sstep(.02, .08, p)).toFixed(2);
@@ -1943,6 +2003,7 @@
       gl.uniformMatrix4fv(U.uModel, false, model);
       gl.uniform3f(U.uSize, SL * TH, RO * TI, CO * TI);
       gl.uniform3f(U.uOrigin, 0, 0, 0);
+      gl.uniform1f(U.uFace, SL * TH / 2); gl.uniform1f(U.uOwn, 0);
       gl.drawArrays(gl.TRIANGLES, 0, 36);
     }
     if (s > 0 && s <= 1) {
@@ -1955,10 +2016,12 @@
         model[12] = lerp(pc.P[0][0], pc.P[1][0], s === 1 ? 1 : tt); model[13] = 0; model[14] = 0;
         gl.uniformMatrix4fv(U.uModel, false, model);
         gl.uniform3f(U.uOrigin, pc.P[0][0], 0, 0);
+        // as a slab leaves the block its edges change over from the block's pattern to its own face's
+        gl.uniform1f(U.uFace, pc.P[0][0] + TH / 2); gl.uniform1f(U.uOwn, s === 1 ? 1 : tt);
         gl.drawArrays(gl.TRIANGLES, 0, 36);
       }
     }
-    gl.uniform3f(U.uSize, TH * grow, TI * grow, TI * grow);
+    gl.uniform3f(U.uSize, TH * grow, TI * grow, TI * grow); gl.uniform1f(U.uOwn, 1);
     for (const pc of s <= 1 ? [] : pieces) {
       const tt = ease(clamp((f - pc.delay[n] * 0.45) / 0.55));
       const a = pc.P[n], b = pc.P[n + 1];
@@ -1970,7 +2033,7 @@
       model[0] = cy * c; model[1] = sn; model[2] = -sy * c; model[4] = -cy * sn; model[5] = c; model[6] = sy * sn; model[8] = sy; model[10] = cy;
       model[12] = x; model[13] = y; model[14] = z;
       gl.uniformMatrix4fv(U.uModel, false, model);
-      gl.uniform3fv(U.uOrigin, pc.P[0]);
+      gl.uniform3fv(U.uOrigin, pc.P[0]); gl.uniform1f(U.uFace, pc.P[0][0] + TH / 2);
       gl.drawArrays(gl.TRIANGLES, 0, 36);
     }
 
