@@ -819,18 +819,60 @@
   }
   @media (max-width: 429px) { .jd .j-marble canvas { width: 5.5rem; height: 5.5rem; } }
   @media (max-width: 429px) { .jd-body .head { font-size: 1.45rem; overflow-wrap: anywhere; } .jd .p-nav b { overflow-wrap: anywhere; } }
+  /* the tagline uses the same light weight as the hero headline */
+  .feat-head { font-weight: 300; letter-spacing: -.01em; max-width: 26ch; text-wrap: balance; }
+
+  /* ---------- menu: three equal stripes ---------- */
+  .menu span:nth-child(2) { width: 100%; left: 0; }
+
+  /* ---------- page titles in the light weight; the gold word behind stays as it was ---------- */
+  .page h1.head { font-weight: 300; }
+  .row h2 span { color: var(--tan); }
+  .figure > span { text-transform: uppercase; letter-spacing: .08em; font-size: .8125rem; font-weight: 600; }
+  .figure b { font-variant-numeric: tabular-nums; }
+  .figure b span { display: inline; margin: 0; color: inherit; }
+
+  /* ---------- format boxes a little larger on phones, still one line ---------- */
+  @media (max-width: 700px) {
+    .pcard .chips { gap: 3px; }
+    .pcard .chips li { font-size: clamp(.5rem, 2.3vw, .6875rem); padding: .4em .42em; letter-spacing: .02em; }
+  }
+
+  /* ---------- terms of use, privacy policy ---------- */
+  [data-view="terms"] #terms, [data-view="privacy"] #privacy { display: block; }
+  .wrap .updated { color: var(--mute); font-size: .875rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+  .legal { max-width: 46rem; border-top: 1px solid var(--grey); }
+  .legal section { padding: clamp(1.75rem, 3.5vw, 2.5rem) 0; border-bottom: 1px solid var(--grey); }
+  .legal h2 { font-size: clamp(1.15rem, 1.8vw, 1.4rem); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; line-height: 1.2; margin-bottom: .9rem; }
+  .legal p { max-width: none; }
+  .legal a { color: var(--tan); }
+  mark.fill { background: rgba(209, 165, 122, .16); color: var(--tan); padding: .05em .3em; border-radius: 2px; }
+
+  /* ---------- about headings in the light weight ---------- */
+  .row h2 { font-weight: 300; }
+
+  /* ---------- home: the flag mark sits above the tagline, with a fine line running out from it ---------- */
+  .feat-top { display: block; }
+  .feat-mark { display: flex; align-items: center; gap: 1.25rem; margin-bottom: clamp(1.25rem, 2.5vw, 2rem); }
+  .feat-mark .flag { width: auto; height: clamp(1.6rem, 2.4vw, 2.25rem); flex: none; }
+  .feat-mark span { flex: 1; height: 1px; max-width: 22rem; background: linear-gradient(to right, rgba(209, 165, 122, .7), rgba(209, 165, 122, 0)); }
+  @media (max-width: 700px) { .feat-top { flex-direction: column; } .feat-mark .flag { width: auto; height: 1.6rem; } }
+
+
+  /* ---------- lighter headings on the cutting stage and the contact section; the gold words behind are unchanged ---------- */
+  .cap h2.head, #contact .head { font-weight: 300; }
 </style>
 </head>
 <body data-view="home">
 
 <header class="top on-dark">
-  <a class="mark" href="#home" aria-label="Kouklas Marble, home"><img class="lg-light" src="data:image/webp;base64,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" width="1056" height="64" alt=""></a>
+  <a class="mark" href="#/home" aria-label="Kouklas Marble, home"><img class="lg-light" src="data:image/webp;base64,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" width="1056" height="64" alt=""></a>
   <button class="menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav id="nav" aria-label="Main">
-    <a href="#about" data-nav="about">About</a>
-    <a href="#collection" data-nav="collection">Collection</a>
-    <a href="#projects" data-nav="projects">Projects</a>
-    <a href="#contact" data-nav="contact">Contact us</a>
+    <a href="#/about" data-nav="about">About</a>
+    <a href="#/collection" data-nav="collection">Collection</a>
+    <a href="#/projects" data-nav="projects">Projects</a>
+    <a href="#/contact" data-nav="contact">Contact us</a>
   </nav>
 </header>
 
@@ -844,20 +886,20 @@
       <div class="cap" data-cap="hero">
         <h1>Raw<br>From Earth.</h1>
         <p>Transforming nature's finest treasures into timeless masterpieces.</p>
-        <a class="btn" href="#collection">Collection</a>
+        <a class="btn" href="#/collection">Collection</a>
       </div>
 
       <div class="cap" data-cap="phero">
         <h1 id="ph-name"></h1>
         <p id="ph-tag"></p>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
-        <a class="btn" href="#contact" data-quote>Get Quote</a>
+        <a class="btn" href="#/contact" data-quote>Get Quote</a>
       </div>
 
       <div class="cap right" data-cap="slabs">
         <span class="num">.01</span>
         <h2 class="head" data-ghost="Unveiled">Slabs</h2>
-        <p>A million years, captured in a single slab.</p>
+        <p>Millions of years, captured in a single slab.</p>
       </div>
 
       <div class="cap" data-cap="tiles">
@@ -870,7 +912,7 @@
         <span class="num">.03</span>
         <h2 class="head" data-ghost="Bespoke">Cut to size</h2>
         <p>Your Vision, Carved in Marble</p>
-        <a class="btn" href="#contact" data-quote>Get Quote</a>
+        <a class="btn" href="#/contact" data-quote>Get Quote</a>
       </div>
 
       <ol class="rail" aria-hidden="true">
@@ -883,36 +925,36 @@
   <!-- home: four marbles from the collection -->
   <section id="featured" class="wrap poly">
     <div class="feat-top rise">
+      <div class="feat-mark"><img class="flag" data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/flag-new.png" width="2785" height="900" alt="Greek flag" decoding="async"><span></span></div>
       <h2 class="feat-head">Giving a different approach to <span>Greek Marble</span></h2>
-      <img class="flag" data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/flag-new.png" width="2785" height="900" alt="Greek flag" decoding="async">
     </div>
     <ul class="pgrid">
-      <li class="rise"><a class="pcard" href="#product/thassos-white">
+      <li class="rise"><a class="pcard" href="#/product/thassos-white">
         <span class="sw"><canvas data-i="0" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/thassos-white-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/thassos-white-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-white-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-white-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="num">.01</span>
         <span class="pname">Thassos White</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/thassos-vein">
+      <li class="rise"><a class="pcard" href="#/product/thassos-vein">
         <span class="sw"><canvas data-i="1" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/thassos-vein-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/thassos-vein-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-vein-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-vein-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="num">.02</span>
         <span class="pname">Thassos Vein</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/pirgon-white">
+      <li class="rise"><a class="pcard" href="#/product/pirgon-white">
         <span class="sw"><canvas data-i="5" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/pirgon-white-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/pirgon-white-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/pirgon-white-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/pirgon-white-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="num">.03</span>
         <span class="pname">Pirgon White</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/aliveri">
+      <li class="rise"><a class="pcard" href="#/product/aliveri">
         <span class="sw"><canvas data-i="15" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/aliveri-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/aliveri-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/aliveri-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/aliveri-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="num">.04</span>
         <span class="pname">Aliveri</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
     </ul>
-    <p class="center rise"><a class="btn" href="#collection">View Collection</a></p>
+    <p class="center rise"><a class="btn" href="#/collection">View Collection</a></p>
   </section>
 
   <!-- about page -->
@@ -922,37 +964,37 @@
     </div>
     <div class="rows">
       <div class="row rise">
-        <div><span class="num">.01</span><h2>Our vision</h2></div>
-        <div><p>Driven by the ambition to reach new horizons, Kouklas Marble strives to strengthen its presence in the global marble industry, embracing greater challenges and more ambitious projects. Through an unwavering commitment to quality, we aim to exceed expectations, cultivate lasting trust, and pursue excellence without compromise.</p></div>
+        <div><span class="num">.01</span><h2>Our <span>vision</span></h2></div>
+        <div><p>Driven by the ambition to reach new horizons, <b>Kouklas Marble</b> strives to strengthen its presence in the global marble industry, embracing greater challenges and more ambitious projects. Through an unwavering commitment to quality, we aim to exceed expectations, cultivate lasting trust, and pursue excellence without compromise.</p></div>
       </div>
       <div class="row split rise">
         <div>
-          <span class="num">.02</span><h2>Our company</h2>
-          <p>Rooted in decades of expertise, Kouklas Marble brings together the timeless artistry of natural stone and the precision of modern innovation. Guided by an appreciation for nature&rsquo;s finest materials, we combine advanced technology with meticulous craftsmanship to ensure excellence in every detail.</p>
+          <span class="num">.02</span><h2>Our <span>company</span></h2>
+          <p>Rooted in decades of expertise, <b>Kouklas Marble</b> brings together the timeless artistry of natural stone and the precision of modern innovation. Guided by an appreciation for nature&rsquo;s finest materials, we combine advanced technology with meticulous craftsmanship to ensure excellence in every detail.</p>
           <p>Our longstanding relationships with quarries around the world allow us to source distinctive stones and maintain an extensive collection, bringing timeless beauty and enduring value to projects worldwide.</p>
         </div>
         <div><figure class="photo tall"><img data-remote src="https://kouklas.gr/wp-content/uploads/2023/06/marble-history.jpg" width="600" height="800" alt="" loading="lazy" decoding="async"></figure></div>
       </div>
       <div class="row split rise">
         <div>
-          <span class="num">.03</span><h2>Our facilities</h2>
+          <span class="num">.03</span><h2>Our <span>facilities</span></h2>
           <p>Our facilities cover a total area of 20,000 m², which hosts our head offices and production departments.</p>
           <div class="figs">
-            <div class="figure"><b>20,000 m<sup>2</sup></b><span>total area in Xanthi</span></div>
-            <div class="figure"><b>40+</b><span>years of experience</span></div>
+            <div class="figure"><b><span data-count="20000">20,000</span> m<sup>2</sup></b><span>Of specialized production</span></div>
+            <div class="figure"><b><span data-count="40">40</span>+</b><span>Years of marble excellence</span></div>
           </div>
         </div>
         <div><figure class="photo"><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/about-fac-2.jpg" width="640" height="426" alt="" loading="lazy" decoding="async"></figure></div>
       </div>
       <div class="row split rise">
         <div>
-          <span class="num">.04</span><h2>Our machinery</h2>
+          <span class="num">.04</span><h2>Our <span>machinery</span></h2>
           <p>Aiming to achieve top quality and precision, we work with world class Italian machinery and properly trained &amp; experienced personnel in order to ensure excellent craftsmanship and quality.</p>
         </div>
         <div><figure class="photo"><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/about-our-fac.jpg" width="620" height="494" alt="" loading="lazy" decoding="async"></figure></div>
       </div>
     </div>
-    <p class="actions rise"><a class="btn" href="#collection">View Collection</a><a class="btn line" href="#contact">Get Quote</a></p>
+    <p class="actions rise"><a class="btn" href="#/collection">View Collection</a><a class="btn line" href="#/contact">Get Quote</a></p>
   </section>
 
   <!-- collection page -->
@@ -961,82 +1003,82 @@
       <h1 class="head" data-ghost="Material">Collection</h1>
     </div>
     <ul class="pgrid">
-      <li class="rise"><a class="pcard" href="#product/thassos-white">
+      <li class="rise"><a class="pcard" href="#/product/thassos-white">
         <span class="sw"><canvas data-i="0" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/thassos-white-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/thassos-white-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-white-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-white-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Thassos White</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/thassos-vein">
+      <li class="rise"><a class="pcard" href="#/product/thassos-vein">
         <span class="sw"><canvas data-i="1" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/thassos-vein-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/thassos-vein-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-vein-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-vein-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Thassos Vein</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/thassos-prinos">
+      <li class="rise"><a class="pcard" href="#/product/thassos-prinos">
         <span class="sw"><canvas data-i="2" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/thassos-prinos-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/thassos-prinos-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-prinos-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-prinos-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Thassos Prinos</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/thassos-radix">
+      <li class="rise"><a class="pcard" href="#/product/thassos-radix">
         <span class="sw"><canvas data-i="3" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/thassos-radix-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/thassos-radix-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-radix-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/thassos-radix-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Thassos Radix</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/pirgon">
+      <li class="rise"><a class="pcard" href="#/product/pirgon">
         <span class="sw"><canvas data-i="4" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/pirgon-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/pirgon-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/pirgon-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/pirgon-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Pirgon</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/pirgon-white">
+      <li class="rise"><a class="pcard" href="#/product/pirgon-white">
         <span class="sw"><canvas data-i="5" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/pirgon-white-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/pirgon-white-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/pirgon-white-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/pirgon-white-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Pirgon White</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/polaris">
+      <li class="rise"><a class="pcard" href="#/product/polaris">
         <span class="sw"><canvas data-i="6" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2023/05/polaris-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2023/05/polaris-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2023/05/polaris-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2023/05/polaris-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Polaris</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/volakas">
+      <li class="rise"><a class="pcard" href="#/product/volakas">
         <span class="sw"><canvas data-i="7" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2023/05/volakas-classic-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2023/05/volakas-classic-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2023/05/volakas-classic-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2023/05/volakas-classic-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Volakas</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/kavala">
+      <li class="rise"><a class="pcard" href="#/product/kavala">
         <span class="sw"><canvas data-i="8" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/kavala-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/kavala-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/kavala-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/kavala-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Kavala</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/kavala-vein">
+      <li class="rise"><a class="pcard" href="#/product/kavala-vein">
         <span class="sw"><canvas data-i="9" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/kavala-vein-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/kavala-vein-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/kavala-vein-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/kavala-vein-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Kavala Vein</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/crystalina">
+      <li class="rise"><a class="pcard" href="#/product/crystalina">
         <span class="sw"><canvas data-i="10" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/crystalina-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/crystalina-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/crystalina-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/crystalina-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Crystalina</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/crystalina-vein">
+      <li class="rise"><a class="pcard" href="#/product/crystalina-vein">
         <span class="sw"><canvas data-i="11" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/crystalina-vein-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/crystalina-vein-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/crystalina-vein-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/crystalina-vein-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Crystalina Vein</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/vratsa">
+      <li class="rise"><a class="pcard" href="#/product/vratsa">
         <span class="sw"><canvas data-i="14" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/vratsa-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/vratsa-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/vratsa-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/vratsa-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Vratsa</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/perla">
+      <li class="rise"><a class="pcard" href="#/product/perla">
         <span class="sw"><canvas data-i="13" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/perla-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/perla-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/perla-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/perla-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Perla</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/nestos">
+      <li class="rise"><a class="pcard" href="#/product/nestos">
         <span class="sw"><canvas data-i="12" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/nestos-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/nestos-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/nestos-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/nestos-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Nestos</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
       </a></li>
-      <li class="rise"><a class="pcard" href="#product/aliveri">
+      <li class="rise"><a class="pcard" href="#/product/aliveri">
         <span class="sw"><canvas data-i="15" width="400" height="400" aria-hidden="true"></canvas><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/aliveri-768x768.jpg" srcset="https://kouklas.gr/wp-content/uploads/2026/11/aliveri-300x300.jpg 300w, https://kouklas.gr/wp-content/uploads/2026/11/aliveri-768x768.jpg 768w, https://kouklas.gr/wp-content/uploads/2026/11/aliveri-1024x1024.jpg 1024w" sizes="(max-width: 700px) 45vw, (max-width: 1000px) 30vw, 22vw" width="768" height="768" alt="" loading="lazy" decoding="async"></span>
         <span class="pname">Aliveri</span>
         <ul class="chips"><li>Slabs</li><li>Tiles</li><li>Cut-to-size</li></ul>
@@ -1055,13 +1097,13 @@
         <p id="p-desc"></p>
         <h3 class="sub">Technical data</h3>
         <table class="tech"><tbody id="p-tech"></tbody></table>
-        <p class="actions"><a class="btn" href="#contact" data-quote>Get Quote</a><a class="btn line" href="#collection">Collection</a></p>
+        <p class="actions"><a class="btn" href="#/contact" data-quote>Get Quote</a><a class="btn line" href="#/collection">Collection</a></p>
       </div>
     </div>
-    <div class="specs rise"><div><h3><span class="num">.01</span>Selections</h3><ul><li>Extra (A1)</li><li>Premium (A2)</li><li>Select (A3)</li><li>Standard (A4)</li><li>Commercial</li></ul></div><div><h3><span class="num">.02</span>Finishes</h3><ul><li>Polished</li><li>Honed</li><li>Sand blasted</li><li>Bush hammered</li><li>Brushed</li><li>Leather finish</li></ul></div><div><h3><span class="num">.03</span>Applications</h3><ul><li>Flooring</li><li>Bathroom</li><li>Countertops</li><li>Wall cladding</li><li>Exterior application</li></ul></div><div><h3><span class="num">.04</span>Tile sizes</h3><ul><li>24×24 in <span>61×61 cm</span></li><li>18×18 in <span>45.7×45.7 cm</span></li><li>16×16 in <span>40.6×40.6 cm</span></li><li>24×12 in <span>61×30.5 cm</span></li><li>12×12 in <span>30.5×30.5 cm</span></li><li>12×6 in <span>30.5×15.25 cm</span></li><li>12×4 in <span>30.5×10.2 cm</span></li><li>8×2 in <span>20.3×5.1 cm</span></li><li>6×3 in <span>15.15×7.6 cm</span></li><li><b class="more">+ more</b></li></ul><p class="thick">All 3/8 in (1 cm) thick</p></div><div><h3><span class="num">.05</span>Tile services</h3><ul><li>Dry lay photo shooting</li><li>Colour or unit allotment</li><li>Special packaging</li></ul></div></div>
+    <div class="specs rise"><div><h3><span class="num">.01</span>Selections</h3><ul><li>Extra (A1)</li><li>Premium (A2)</li><li>Select (A3)</li><li>Standard (A4)</li><li>Commercial</li></ul></div><div><h3><span class="num">.02</span>Finishes</h3><ul><li>Polished</li><li>Honed</li><li>Sand blasted</li><li>Bush hammered</li><li>Brushed</li><li>Leather finish</li></ul></div><div><h3><span class="num">.03</span>Applications</h3><ul><li>Flooring</li><li>Bathroom</li><li>Countertops</li><li>Wall cladding</li><li>Exterior application</li></ul></div><div><h3><span class="num">.04</span>Tile sizes</h3><ul><li>24×24 in <span>61×61 cm</span></li><li>18×18 in <span>45.7×45.7 cm</span></li><li>16×16 in <span>40.6×40.6 cm</span></li><li>24×12 in <span>61×30.5 cm</span></li><li>12×12 in <span>30.5×30.5 cm</span></li><li>12×6 in <span>30.5×15.25 cm</span></li><li>12×4 in <span>30.5×10.2 cm</span></li><li>8×2 in <span>20.3×5.1 cm</span></li><li>6×3 in <span>15.15×7.6 cm</span></li><li><b class="more">+ more</b></li></ul><p class="thick">All 3/8 (1 cm) in thickness</p></div><div><h3><span class="num">.05</span>Tile services</h3><ul><li>Dry lay photo shooting</li><li>Colour or unit allotment</li><li>Special packaging</li></ul></div></div>
     <nav class="p-nav" aria-label="Other marbles">
-      <a id="p-prev" href="#collection"><span class="plab">Previous</span><b></b></a>
-      <a id="p-next" href="#collection"><span class="plab">Next</span><b></b></a>
+      <a id="p-prev" href="#/collection"><span class="plab">Previous</span><b></b></a>
+      <a id="p-next" href="#/collection"><span class="plab">Next</span><b></b></a>
     </nav>
   </section>
 
@@ -1072,90 +1114,127 @@
     </div>
     <ul class="jgrid">
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/ALIATHON-IONIAN-PAPHOS-CYPRUS.png" data-slug="aliathon-ionian">
-        <a class="ph" href="#project/aliathon-ionian" aria-label="Aliathon Ionian"><span class="ghostnum" aria-hidden="true">.01</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/ALIATHON-IONIAN-PAPHOS-CYPRUS.png" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/aliathon-ionian" aria-label="Aliathon Ionian"><span class="ghostnum" aria-hidden="true">.01</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/ALIATHON-IONIAN-PAPHOS-CYPRUS.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.01</span>
-        <h3 class="jname"><a href="#project/aliathon-ionian">Aliathon Ionian</a></h3>
+        <h3 class="jname"><a href="#/project/aliathon-ionian">Aliathon Ionian</a></h3>
         <p class="jloc">Paphos, Cyprus</p>
-        <p class="jmat">Material: <a href="#product/crystalina">Crystalina</a></p>
+        <p class="jmat">Material: <a href="#/product/crystalina">Crystalina</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/OGUZ-HAN-UNIVERSITY-TURKMENISTAN.png" data-slug="oguz-han-university">
-        <a class="ph" href="#project/oguz-han-university" aria-label="Oguz Han University"><span class="ghostnum" aria-hidden="true">.02</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/OGUZ-HAN-UNIVERSITY-TURKMENISTAN.png" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/oguz-han-university" aria-label="Oguz Han University"><span class="ghostnum" aria-hidden="true">.02</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/OGUZ-HAN-UNIVERSITY-TURKMENISTAN.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.02</span>
-        <h3 class="jname"><a href="#project/oguz-han-university">Oguz Han University</a></h3>
+        <h3 class="jname"><a href="#/project/oguz-han-university">Oguz Han University</a></h3>
         <p class="jloc">Ashgabat, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#product/thassos-white">Thassos White</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/CYPRUS-UNIVERSITY-OF-TECHNOLOGY.png" data-slug="university-of-technology">
-        <a class="ph" href="#project/university-of-technology" aria-label="University of Technology"><span class="ghostnum" aria-hidden="true">.03</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/CYPRUS-UNIVERSITY-OF-TECHNOLOGY.png" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/university-of-technology" aria-label="University of Technology"><span class="ghostnum" aria-hidden="true">.03</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/CYPRUS-UNIVERSITY-OF-TECHNOLOGY.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.03</span>
-        <h3 class="jname"><a href="#project/university-of-technology">University of Technology</a></h3>
+        <h3 class="jname"><a href="#/project/university-of-technology">University of Technology</a></h3>
         <p class="jloc">Paphos, Cyprus</p>
-        <p class="jmat">Material: <a href="#product/kavala-vein">Kavala Vein</a></p>
+        <p class="jmat">Material: <a href="#/product/kavala-vein">Kavala Vein</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/DASHOGUZ-MOSQUE-TURKMENISTAN.png" data-slug="dashoguz-mosque">
-        <a class="ph" href="#project/dashoguz-mosque" aria-label="Dashoguz Mosque"><span class="ghostnum" aria-hidden="true">.04</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/DASHOGUZ-MOSQUE-TURKMENISTAN.png" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/dashoguz-mosque" aria-label="Dashoguz Mosque"><span class="ghostnum" aria-hidden="true">.04</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/DASHOGUZ-MOSQUE-TURKMENISTAN.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.04</span>
-        <h3 class="jname"><a href="#project/dashoguz-mosque">Dashoguz Mosque</a></h3>
+        <h3 class="jname"><a href="#/project/dashoguz-mosque">Dashoguz Mosque</a></h3>
         <p class="jloc">Dashoguz, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#product/thassos-white">Thassos White</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2024/05/TRILOGY-LIMASSOL-CYPRUS.png" data-slug="trilogy">
-        <a class="ph" href="#project/trilogy" aria-label="Trilogy"><span class="ghostnum" aria-hidden="true">.05</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/TRILOGY-LIMASSOL-CYPRUS.png" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/trilogy" aria-label="Trilogy"><span class="ghostnum" aria-hidden="true">.05</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2024/05/TRILOGY-LIMASSOL-CYPRUS.png" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.05</span>
-        <h3 class="jname"><a href="#project/trilogy">Trilogy</a></h3>
+        <h3 class="jname"><a href="#/project/trilogy">Trilogy</a></h3>
         <p class="jloc">Limassol, Cyprus</p>
-        <p class="jmat">Material: <a href="#product/thassos-vein">Thassos Vein</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-vein">Thassos Vein</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/museum.jpg" data-slug="archaeological-museum">
-        <a class="ph" href="#project/archaeological-museum" aria-label="Archaeological Museum"><span class="ghostnum" aria-hidden="true">.06</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/museum.jpg" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/archaeological-museum" aria-label="Archaeological Museum"><span class="ghostnum" aria-hidden="true">.06</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/museum.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.06</span>
-        <h3 class="jname"><a href="#project/archaeological-museum">Archaeological Museum</a></h3>
+        <h3 class="jname"><a href="#/project/archaeological-museum">Archaeological Museum</a></h3>
         <p class="jloc">Nicosia, Cyprus</p>
-        <p class="jmat">Material: <a href="#product/kavala">Kavala</a></p>
+        <p class="jmat">Material: <a href="#/product/kavala">Kavala</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/al-haram.jpg" data-slug="al-haram-mosque">
-        <a class="ph" href="#project/al-haram-mosque" aria-label="Al-Haram Mosque"><span class="ghostnum" aria-hidden="true">.07</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/al-haram.jpg" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/al-haram-mosque" aria-label="Al-Haram Mosque"><span class="ghostnum" aria-hidden="true">.07</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/al-haram.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.07</span>
-        <h3 class="jname"><a href="#project/al-haram-mosque">Al-Haram Mosque</a></h3>
+        <h3 class="jname"><a href="#/project/al-haram-mosque">Al-Haram Mosque</a></h3>
         <p class="jloc">Mecca, Saudi Arabia</p>
-        <p class="jmat">Material: <a href="#product/thassos-white">Thassos White</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/alem.jpg" data-slug="alem-cultural-center">
-        <a class="ph" href="#project/alem-cultural-center" aria-label="Alem Cultural Center"><span class="ghostnum" aria-hidden="true">.08</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/alem.jpg" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/alem-cultural-center" aria-label="Alem Cultural Center"><span class="ghostnum" aria-hidden="true">.08</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/alem.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.08</span>
-        <h3 class="jname"><a href="#project/alem-cultural-center">Alem Cultural Center</a></h3>
+        <h3 class="jname"><a href="#/project/alem-cultural-center">Alem Cultural Center</a></h3>
         <p class="jloc">Ashgabat, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#product/thassos-white">Thassos White</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/mahabat.jpg" data-slug="mahabat-monument">
-        <a class="ph" href="#project/mahabat-monument" aria-label="Mahabat Monument"><span class="ghostnum" aria-hidden="true">.09</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/mahabat.jpg" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/mahabat-monument" aria-label="Mahabat Monument"><span class="ghostnum" aria-hidden="true">.09</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/mahabat.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.09</span>
-        <h3 class="jname"><a href="#project/mahabat-monument">Mahabat Monument</a></h3>
+        <h3 class="jname"><a href="#/project/mahabat-monument">Mahabat Monument</a></h3>
         <p class="jloc">Ashgabat, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#product/thassos-white">Thassos White</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/ruhy.jpg" data-slug="turkmenbashi-ruhy-mosque">
-        <a class="ph" href="#project/turkmenbashi-ruhy-mosque" aria-label="Turkmenbashi Ruhy Mosque"><span class="ghostnum" aria-hidden="true">.10</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/ruhy.jpg" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/turkmenbashi-ruhy-mosque" aria-label="Turkmenbashi Ruhy Mosque"><span class="ghostnum" aria-hidden="true">.10</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/ruhy.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.10</span>
-        <h3 class="jname"><a href="#project/turkmenbashi-ruhy-mosque">Turkmenbashi Ruhy Mosque</a></h3>
+        <h3 class="jname"><a href="#/project/turkmenbashi-ruhy-mosque">Turkmenbashi Ruhy Mosque</a></h3>
         <p class="jloc">Turkmenbashi, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#product/thassos-white">Thassos White</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/seyit.jpg" data-slug="seyit-jemaletdin-mosque">
-        <a class="ph" href="#project/seyit-jemaletdin-mosque" aria-label="Seyit Jemaletdin Mosque"><span class="ghostnum" aria-hidden="true">.11</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/seyit.jpg" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/seyit-jemaletdin-mosque" aria-label="Seyit Jemaletdin Mosque"><span class="ghostnum" aria-hidden="true">.11</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/seyit.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.11</span>
-        <h3 class="jname"><a href="#project/seyit-jemaletdin-mosque">Seyit Jemaletdin Mosque</a></h3>
+        <h3 class="jname"><a href="#/project/seyit-jemaletdin-mosque">Seyit Jemaletdin Mosque</a></h3>
         <p class="jloc">Annau, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#product/thassos-white">Thassos White</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
       <li class="jcard rise" data-img="https://kouklas.gr/wp-content/uploads/2026/11/arkadog.jpg" data-slug="grand-mosque-of-arkadog">
-        <a class="ph" href="#project/grand-mosque-of-arkadog" aria-label="Grand Mosque of Arkadog"><span class="ghostnum" aria-hidden="true">.12</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/arkadog.jpg" alt="" loading="lazy" decoding="async"></a>
+        <a class="ph" href="#/project/grand-mosque-of-arkadog" aria-label="Grand Mosque of Arkadog"><span class="ghostnum" aria-hidden="true">.12</span><img data-remote src="https://kouklas.gr/wp-content/uploads/2026/11/arkadog.jpg" alt="" loading="lazy" decoding="async"></a>
         <span class="num">.12</span>
-        <h3 class="jname"><a href="#project/grand-mosque-of-arkadog">Grand Mosque of Arkadog</a></h3>
+        <h3 class="jname"><a href="#/project/grand-mosque-of-arkadog">Grand Mosque of Arkadog</a></h3>
         <p class="jloc">Arkadog, Turkmenistan</p>
-        <p class="jmat">Material: <a href="#product/thassos-white">Thassos White</a></p>
+        <p class="jmat">Material: <a href="#/product/thassos-white">Thassos White</a></p>
       </li>
     </ul>
+  </section>
+
+  <!-- terms of use -->
+  <section id="terms" class="wrap poly page">
+    <div class="rise">
+      <h1 class="head" data-ghost="Legal">Terms of use</h1>
+      <p class="updated">Last updated: 14 November 2026</p>
+    </div>
+    <div class="legal">
+      <section><span class="num">.01</span><h2>About this website</h2><p>This website is operated by BUILDEV SOCIETE ANONYME (&ldquo;Kouklas Marble&rdquo;, &ldquo;we&rdquo;), 5th km Xanthi-Lefki, Xanthi 67100, Greece, G.E.MI. 012762046000, VAT no. 999974777. It presents our company, our marbles and our projects. By using it you accept these terms.</p></section>
+      <section><span class="num">.02</span><h2>Using the website</h2><p>You may browse the website, link to it and share its pages. You may not interfere with its operation, try to gain access to parts of it that are not public, copy it in bulk by automated means, or use it for anything unlawful.</p></section>
+      <section><span class="num">.03</span><h2>Intellectual property</h2><p>The texts, photographs, logo, 3D presentation and design of this website belong to Kouklas Marble or to those who have licensed them to us. They may not be copied, altered or used commercially without our written permission.</p></section>
+      <section><span class="num">.04</span><h2>Product information</h2><p>Marble is a natural material. Colour, veining and pattern vary from block to block, so photographs and 3D presentations show how a marble typically looks, not the exact piece you will receive. Technical data are typical values and are not a guarantee for a specific supply. Availability depends on stock.</p></section>
+      <section><span class="num">.05</span><h2>No offer</h2><p>Nothing on this website is a binding offer. Prices and availability are given on request, and any order is governed by a separate written agreement with us.</p></section>
+      <section><span class="num">.06</span><h2>Links to other websites</h2><p>The website links to other websites, such as social media. We do not control them and are not responsible for their content or for how they handle your data.</p></section>
+      <section><span class="num">.07</span><h2>Liability</h2><p>We take care to keep the website accurate and available, but we provide it as it is. To the extent the law allows, we are not liable for loss arising from the use of the website or from reliance on its content. Nothing in these terms limits liability that cannot be limited by law.</p></section>
+      <section><span class="num">.08</span><h2>Governing law</h2><p>These terms are governed by Greek law. The courts of Xanthi have jurisdiction over any dispute, unless the law gives you the right to choose otherwise.</p></section>
+      <section><span class="num">.09</span><h2>Changes and contact</h2><p>We may update these terms; the date above shows the latest version. Questions: <a href="mailto:info@kouklas.gr">info@kouklas.gr</a>, +30 25410 77260.</p></section>
+    </div>
+  </section>
+
+  <!-- privacy policy -->
+  <section id="privacy" class="wrap poly page">
+    <div class="rise">
+      <h1 class="head" data-ghost="Legal">Privacy policy</h1>
+      <p class="updated">Last updated: 14 November 2026</p>
+    </div>
+    <div class="legal">
+      <section><span class="num">.01</span><h2>Who we are</h2><p>The controller of your personal data is BUILDEV SOCIETE ANONYME (&ldquo;Kouklas Marble&rdquo;, &ldquo;we&rdquo;), 5th km Xanthi-Lefki, Xanthi 67100, Greece, G.E.MI. 012762046000, VAT no. 999974777. Contact: <a href="mailto:info@kouklas.gr">info@kouklas.gr</a>, +30 25410 77260.</p></section>
+      <section><span class="num">.02</span><h2>What we collect</h2><p><b>When you contact us</b> through the form, by email or by phone: your name, email address, phone number if you give it, the type of request and your message. Please do not send sensitive personal data.</p><p><b>When you visit</b>: the server that hosts the website keeps standard technical logs, such as IP address, date and time, pages requested and browser type.</p></section>
+      <section><span class="num">.03</span><h2>Why we use it</h2><p>We use what you send us to answer your request and prepare a quote. The legal basis is taking steps at your request before a contract (GDPR Article 6(1)(b)) and our legitimate interest in replying to enquiries (Article 6(1)(f)). Server logs are used to keep the website secure and working (Article 6(1)(f)).</p><p>We do not send marketing messages without your consent, and we make no automated decisions about you.</p></section>
+      <section><span class="num">.04</span><h2>Who receives it</h2><p>Your data is seen by our staff who handle requests, and by providers who work on our instructions: our website hosting and email providers. We do not sell personal data. If a provider processes data outside the European Economic Area, we make sure the safeguards the law requires are in place.</p></section>
+      <section><span class="num">.05</span><h2>How long we keep it</h2><p>We keep enquiries for as long as we need them to handle your request and our dealings with you, and longer where the law requires it, for example for tax records when an order follows. Server logs are kept for a limited time.</p></section>
+      <section><span class="num">.06</span><h2>Cookies</h2><p>This website sets no cookies and uses no analytics or advertising trackers. Its fonts and photographs are served from kouklas.gr. Links to social media lead to other websites, which have their own policies.</p></section>
+      <section><span class="num">.07</span><h2>Your rights</h2><p>You can ask us for access to your data, to correct or delete it, to restrict its use, to object to its use, or to receive it in a portable format. Write to <a href="mailto:info@kouklas.gr">info@kouklas.gr</a>; we reply within one month. You also have the right to complain to the Hellenic Data Protection Authority (<a href="https://www.dpa.gr" target="_blank" rel="noopener">www.dpa.gr</a>).</p></section>
+      <section><span class="num">.08</span><h2>Changes</h2><p>We may update this policy; the date above shows the latest version.</p></section>
+    </div>
   </section>
 
   <!-- contact: the last section of the home page, and a page of its own -->
@@ -1201,7 +1280,7 @@
       <h2 class="head" id="j-name"></h2>
       <p class="j-loc" id="j-loc"></p>
       <h3 class="sub">Material</h3>
-      <a class="j-marble" id="j-marble" href="#collection">
+      <a class="j-marble" id="j-marble" href="#/collection">
         <canvas id="j-swatch" width="240" height="240" aria-hidden="true"></canvas>
         <span>
           <b id="j-marble-name"></b>
@@ -1213,14 +1292,14 @@
     </div>
   </div>
   <nav class="p-nav" aria-label="Other projects">
-    <a id="j-prev" href="#projects"><span class="plab">Previous</span><b></b></a>
-    <a id="j-next" href="#projects"><span class="plab">Next</span><b></b></a>
+    <a id="j-prev" href="#/projects"><span class="plab">Previous</span><b></b></a>
+    <a id="j-next" href="#/projects"><span class="plab">Next</span><b></b></a>
   </nav>
 </dialog>
 
 <footer>
   <div class="f-main">
-    <a class="khome" href="#home" aria-label="Kouklas Marble, home"><img class="kmark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAARBUlEQVR42u3d228c12HH8XPOzHJ3Zy+kjQIRWiivcWFHFB2h7aP3tXbRoi6ZRrzErmvJTZ0gtWpLpJIMp424UhIndVK7kezYFinJ8CowigZpUcvo1i2KAoFiXYy2KND/IE3JXe7u7GVmTh9EKpatWBdyuWdmv79nPYiX3/7OZ2aWK4WBuXjyQGrfwVO9S6fnn8zlRl70O11LCKmM+Q9q3RsrOKla03+nFa4/+pv/c29DeJ6WQmhBYh2ttRRiUUrpRe+/cfTNdMqearW7kZRm/P5pLbSSIspl01bDb3vS2PKuzM9kM6nXe71QhZEWUgppyA84GM1n7abf/Zde2/rdice9Na21lFJS3iSUd3FRSs+L3j+38Goum3m83vRNKq9QUgSj+axda/qLe/YvebZR38Cqa8uS17u8vDCXc0ZOtzs9HUaRkFIaUt4oGM07dtPvvNuu27+976DXcl1XSSkjfv0TsryeF109u7A8WnBmV+vNQEppG7S8YTGftf+v3vImZstepTJp2SYtryx5vfeWF+YcJ3W63e1GQaSlMrC8Qa/98L6Dz7e06yrpeZQ3Qct79dzR06P5zOxqvdUTQqZMK2/tWnkXq1XXfqjkhdKkY/N7y4fn8k7mdKfXi4LQpPJuHJvbnXd/9r+rj5SefqlBeZNn3o3yzq2t+z0hhHHlXWv6i3v3L3nVqmuXSl4ohNDKuPJ2zSvvWN6xm36X8iZ1ea+XNzu3Wm8FBpVXfHB5P1xeIcRgLwxtmDd4b3lhLu+kDFzejWMzyzsEy5udW1tvxWF5gw/+OzVg85pfXr/zbtBtP0x5k7y8GWPLe5PlvSES82JezBsf83743yvMi3kxb3zMO9AFxrwE827NvANbYMxLMO/WzTuQBca8BPNuj3l3fIExL8G822feHV1gzEsw7/aad8cWGPMSzLv95t2RBca8BPP2x7x9X2DMSzBv/8zb1wXGvATz9te8fVtgzEswb//N25cFxrwE8+6Mebd9gTEvwbw7Z95tXWDMSzDvzpp32xYY8xLMu/Pm3ZYFxrwE8w7GvFteYMxLMO/gzLulBca8BPMO1rx3vcCYl2DewZv3rhYY8xLMa4Z573iBMS/BvOaY944WGPMSzGuWeW97gTEvwbzmmfe2FhjzEsxrpnlvucCYl2Bec837sQuMeQnmNdu8v3SBMS/BvOab96YLjHkJ5o2HeT+ywJvlvby8gHkJ5jXcvDdd4Esr8zN5J73S7nYxL8G8Bpv3Iwt85dzRJ9Mj1rJ5y4t5MS/mvWWBbaVOBaGWQRgZZt6N5f356iN7555vUt6ELa8XD/OOz5YXTTs231DgXhDqKNJaYl6CeY0374djSymkOT/ga8fmRrv97s9+TnmTvbzXzCulNNO8s2UjzTuwzwfGvCwv5k1ogTEv5sW8MS0w5sW8mHcLBsa8BPPGx7zGLDDmxbyYN6YFxryYF/PGtMCYF/Ni3pgaGPNiXswb0wXGvJgX88a0wJgX82LemBYY82JezBtTA2NezIt5Y7rAmBfzYt6YFhjzYl7MG9MCY17Mi3ljamDMi3kxb0wXGPNiXswb0wJjXsyLeWNaYMyLeTFvTA2MeTEv5o3pAmNezIt5Y1pgzIt5MW9MC4x5MS/mjamBMS/mxbwxXWDMi3kxb0wLjHkxL+aNaYExL+bFvDE1MObFvJg3pguMeTEv5o1pgTEv5sW8MS0w5sW8mDemBsa8mBfzxnSBMS/mxbwxLbDWOhgtYF7Mi3ljV2CtdW80n7WbrQ7mxbyYN24FvqfgpBqtzr8GPY7NQ2Je26DlDW6yvAHlvYMCN/zOhWZY59iMeTFvHAv8H//134/81uz36i7lxbyYN3aRmz90KSXfvKQsr/dB8zYDg47NYvPYXKu3PMq7DQXWWkgp+eYlZnnljeY1dXk/cGzmPu9WjtCUF/Ni3pgfoUmSltds83KrKIYf8E24z8t9XhaYYF7CAmNezMsCE8yLeVlggnkJC4x5MS8LTDAv5mWBCebl2MwCE8xLWGDMi3lZYIJ5MS8LTDAvYYExL+YlLDDmxbwsMMG8hAVmeTEvYYExL+ZlgQnmxbwsMMG8hAXGvJiXsMCYF/OywATzEhaY5cW8hAXGvJiXsMCYF/OywATzEhYY82JewgJjXszLAhPMS1hgzIt5CQuMeTEvYYExL+ZlgQnmJSww5sW8hAXGvJiXBSaYl7DAmBfzEhYY82JewgJjXszLAlNezEtYYMyLeQkLjHkxL2GBMS9hgTEv5iUsMObFvIQFxryEBWZ5MS9hgTEv5iUsMObFvIQFxryEBca8mJewwJgX8xIWGPMSMmQLjHkJC4x5MS9hgTEv5iUsMOYlLDDmxbyEBca8mJewwJiXX0kytAuMeQkLjHkx791+ja6rxP33Szk1BQVYYMwbt/JKz4vk1FSoXZf3mVPgO1xeLx7mHZ8tLybt2Fx1XVt6XvTT08/uu3pu/pD0vKhSmbR4vzkFxryml7fq2iXPCy6+evjTTibzd78yVvjW5ZX5r01NnQ+rVdeiYhgY8xq8vCXPC37yyrOfKhazF6SUu/1OtztWcEZW6y1vIoGnDRYY84qkLW9xNHtBSbm71e6GUsqResMP7ik67uVzC26p5AUbS8xxmgXmPq9py1soZi5YltrdbHVDpaR1sxewcZaYBca85i1voZh5x1I3llcIIaQUMtLCqjf8YLTouJfP3LDEZBgXGPOas7z//vJzvz42mv4npdQu3++G8gPlvckLWlDMZ21MPMQLjHkNOjYvH3pgbDRzQUm5q/Ux5d1YYrG5xJh4SBcY85pT3ouvzd/nOPY/W5b6hH+L8n7cCxwmHpIFxrzmlPffXnvmvpxjv21Z6hOtOygvJh7SBca8Jl1tPvRAIZ+9oCxrl9++s/Ji4iFcYMxr0rH5mftyBedtZVu7WlsoLyYekgXGvOaU99Lrz92fcdLvKCl3+e3elsqLiYdggTGvQcfmlWc/NZJJX7Ck2tbyYuKELjDmNeQhjdK15c3m0n8vpfqk73e3tbyYOIELjHkN+BorFatUuna1Oe2k/1FJ9clWH8uLiRNSYN7Pa8j7eaemwp+8cuiBe3O5ty2lfq3p3/h4ZB9LfP04PZbLLl5ZmV+kxDEpMOY16wmrYjH3tqXUbn+HyouJY2xgzDv4uK6rPM+Lrr2rKHvBUnJ3c4fLi4ljWODryxuDY3NSb3No11Vi0dNX3jjyG1k79ZaW8lfb23y1mdt0CTxCY14zcv7+/5RSCi0jda+QclcvCCItB39NBBMbXGDMa06mps6H2nXV+MzSPzT87sMp2w5SliW01pFJJcbEhhyhMa8w+t7vxZXDD+czI28FgU4FYaillMqQF1RMPOgF5j6vuSmVvEBXXXvf7IkfN1q9R21LBbZlSUOWmPvEg15gnm2ORy6ePJDad/BU76fLh38nlxl5Kwi1ZdAS8+z0IBYY88Yn+w6e6l08eSD1mbkTP2p2eo/algwtS0lMPKQLjHnjvcQXl+d/L5dJ/TAIQxWGESYepgXGvPFeYl117X1z5b9ttjqTKduKLEvJKNIaEw/BAmPehJn49Pzv55xUpRcYtcSYuB8LjHkTaOLPl99q+p3P2pbSllJSC0ycyAXGvMmMrrq2LHnBeyvzf+BkUm8GQSh6QSSVkhITJ2SBMW+CX+FLXnDx5IHUg7PlH/p+9w9t2xIpW+lIY+JELDDmHTYTH/lsLjvyRi8MdRhFQgpMHNsFxrzDaOLjbzbbvf0p25KWUsKQJR5aE0vMS+7OxEc+52RGzvWCMArCSCqJiWOzwJgXEz84e/yNVqc3PWLbyrYkJo7LAmNecoOJVw7P5DOZlW4QmLTEQ2NihXnJVp7Y+szsiTONVmcunTJqiYfGxBLzku1Y4veWD8/lnczpTrcXBZHGxCYtMOYlt7o6/eDcieWG33ksPZJS197EhImNWGDMS+5kiS+dWXgsl0291ukEYRhFSmLiwS0w5iV3usQTM0uvrzfaT6TTKctSKtKYeDALjHnJ1kw8/0Qhl36l3emZtMSJM7HCvKQ/Ji7/YL3VfTJj1hInzsQS85J+PrF16cz8k4Vs+pRv1hInxsQK85J+PbF18uSB1MRM+eVaq/NUFhP3d4ExL+nrE1tnjjw16mT/ptXuhhEm3t4Fxryk709szRz/fsNvf8HJjFiWxMTb9jW4rqsWhRBx+awijs1xfxfTwhdGc+kXm2YtcWxN/Ivynl1Yxryk3yZ+cHbppUar/XQuM2IpJTHxdhj4/XMLr44WnMdX65iX7MwSX16Z/2Ihn/lus9UNI42J77rAl8/OV4pOZnK91Q6EkDafz0t2rMRnjnypkMu+0Gx1wkhr447TcSCbctIjk/VmOzKxvEn+fN5hP05Xq669d+b4dxut9pfzTtpS0rzjdBw+n1j57V5owh/rxrzDlY1S2OPT5RdqzfYzppbYdBMrIYVl0PIGN1negPIm+6NNJ2bK36k3/EN5J2NZSoYGldiuN/xgrJBdvPSLJbZNWmLFfV4y6OO0rrr23tnj3643/T/PZTO2QUts/H1ihXmJOSYuP19rNJ/L5zaXWGBikwuMeclHjtOzJ75Za/iHc07GtpQIMbGhBca85Jct8cRM+Ru1ZvtI3snYChObV2DMS251dXpieulErenPF66XWGBiEwqMecltlDisVl1773T5+Oq6f7TgZGwlBSYedIExL7ndX5XNJX5wtry0tt7+SiFnZokHbWKFeYnxx+nZpWNrDf+rBpZ44CZWmJfE4Tg9MVP++nqz/bVi3qgSD9zECvOSGBynw2rVtfdML/3l2np70bASD9TECvOSOJV478ySV2v4XjGfvVZiA/5zgzSxwrwkbhe2xqfLi7V1/y+K+aythA60NqbEO25ihXlJnPLQxhKPzyy5a/Xm14t5x5ZSBFoMp4kV5iUiXn9GVT9U8sKq69p7Z49/dW29dWw0n7WVMO84vRMmVpiXxLLE3kaJZ8pfWVv3l4r5rC2FDobNxArzkriWuORdv7B1tNZolUfzjmkl7ruJFeYlMc714/T4dHlhrdE6sVliYUaJ+25ihXlJYo7T0+Uja43mN8YKji3MKXFfTawwL0lWiY8fXq23vjmWN7PE221ihXlJAi9sPVdr+N8ysMTbbmKFeUmiSrzohbpSsfZMLz27tu5/27Dj9LabWGFekqgSS6HF1FSkKxVrfGbpUG3d/85Y3rGFTqaJFeYlSVxiMXmtxHuml56pNdp/NVZMpokV5iVJX+I908f+rNbwXxgrOLYUopckEyvMS4ZiifcvfXlt3f/eaCGbMug4vWUTK8xLEr/Ek1NRpTJpjU8vfWmt3v7rsWJyTKwwLxmGEk9Ono90ZdIanzn2xdq6/+JY0bG1jr+JFeYlw7PE5zcvbD1da7RfuqcYfxMrzEuGq8STUaUyae3Zf+xP19Zb3x8tOLE2scK8ZLhKLPXk5PkNE5f/ZK3ROjlWzNnCrCW+bRMrzEuG1cSVyqQ1vn/pqVrDPzVWcFLSwBLfysQK85JhL/Ge/ccO1putl0cLTkrEzMRKXGsn5iVDWuJKVKlMWp/+3NKBtfXWD8YKTkrHyMRKa6GVwLxkmE1c2bxP/Mdr6/6r9xSdWJhYCyFtJUW0WV7MS4a1xFqLSGtXSek9cfXcUXVP0Xlstd4MhJC2aSa+tDIvJkreYqUyadm5bNpabbS8iemyV3Wvm5eQoTtOa70otBZKSu/xK2fno4KT/aN604+klMokE99bdNyrZxb0nqklz677bW9iurxYqVSs0tQU5iVDvsR6s8RPXDl7NO9kRqZa7a4pJRaRFlat4Yc5J7149cyC+H+/abid6nm6IAAAAABJRU5ErkJggg==" width="72" height="72" alt="Kouklas Marble"></a>
+    <a class="khome" href="#/home" aria-label="Kouklas Marble, home"><img class="kmark" src="data:image/png;base64,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" width="72" height="72" alt="Kouklas Marble"></a>
     <div class="f-details">
       <div class="f-col">
         <h3>Contact</h3>
@@ -1233,7 +1312,7 @@
       </div>
       <div class="f-col">
         <h3>Explore</h3>
-        <nav aria-label="Pages"><a href="#about">About</a><a href="#collection">Collection</a><a href="#projects">Projects</a><a href="#contact">Contact us</a></nav>
+        <nav aria-label="Pages"><a href="#/about">About</a><a href="#/collection">Collection</a><a href="#/projects">Projects</a><a href="#/contact">Contact us</a></nav>
       </div>
       <div class="f-col">
         <h3>Follow</h3>
@@ -1247,7 +1326,7 @@
     </div>
   </div>
   <div class="f-base">
-    <nav aria-label="Legal"><a href="#">Terms of use</a><a href="#">Privacy policy</a></nav>
+    <nav aria-label="Legal"><a href="#/terms">Terms of use</a><a href="#/privacy">Privacy policy</a></nav>
     <button class="totop" type="button">Back to top</button>
   </div>
 </footer>
@@ -1295,7 +1374,7 @@
   addEventListener('scroll', updateTape, { passive: true });
 
   /* ---------- products ---------- */
-  const PRODUCTS = [{"n": "Thassos White", "d": "Thassos White is the world’s whitest marble. Its unique, refined character and sense of elegancy derives from its uniform, highly shiny total white surface. A fined-grained marble with high bright, crystalline color and high solar reflectance. Suitable for both exterior and interior applications.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.95, 0.95, 0.95, 0.35, 0.6, 0.6, 0.62, 0, 0.75, 0.75, 0.75, 0.04, 0, 0, 0, 0], "t": "Pure white", "b": "2026/11/thassos-white", "s": "thassos-white", "e": "Pure crystalline white, uniform and luminous."}, {"n": "Thassos Vein", "d": "Thassos Vein is a pure snow-white marble distinguished by subtle light grey veins. Its delicate natural patterns enhance its luminous appearance, creating a timeless sense of elegance and understated luxury.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.93, 0.93, 0.94, 0.35, 0.6, 0.61, 0.63, 0.32, 0.75, 0.75, 0.76, 0.1, 0, 0, 0, 0], "t": "White, faint grey veins", "b": "2026/11/thassos-vein", "s": "thassos-vein", "e": "Near-pure white, traced with faint grey streaks."}, {"n": "Thassos Prinos", "d": "Thassos Prinos is a white marble with contrasting grey veins and details. Coming from the same quarries as the world famous Thassos White Marble, it is an excellent solution for many construction needs.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.975, 0.975, 0.972, 0.85, 0.855, 0.86, 0.75, 0.44, 0.45, 0.47, 0.62, 0.6, 0.6, 0.62, 0.25, 0, 0, 0, 0], "t": "White, grey veins", "b": "2026/11/thassos-prinos", "s": "thassos-prinos", "e": "Bright white, marked with soft grey veins."}, {"n": "Thassos Radix", "d": "Thassos Radix is a rare variation of the world famous Thassos marble. Its unique appearance rises from its golden veins that resemble tree roots. Every Book-match presentation of Thassos Spider, is a unique work of art.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.95, 0.94, 0.92, 0.4, 0.72, 0.52, 0.22, 0.85, 0.82, 0.64, 0.3, 0.7, 0, 0, 0, 0], "t": "White, gold veins", "b": "2026/11/thassos-radix", "s": "thassos-radix", "e": "A rare white, threaded with gold veins that branch like roots."}, {"n": "Pirgon", "d": "Pirgon is a dolomitic material with bright white background. Its uniqueness lies in its beautiful brownish and grayish veins, clouds and impressive arabesque motifs. Its technical properties and pattern ensure that the material can be used with ease in any interior applications, providing multiple color combinations and stunning results.", "tech": ["2830", "0.9", "0.3", "5", "164", "Calcite 8, dolomite 92"], "m": [0.978, 0.976, 0.97, 0.84, 0.84, 0.85, 0.95, 0.42, 0.4, 0.4, 0.72, 0.62, 0.48, 0.36, 0.6, 0, 0, 0, 0], "t": "White, brown and grey veins", "b": "2026/11/pirgon", "s": "pirgon", "e": "Bright white with brown and grey veins, clouds and arabesques."}, {"n": "Pirgon White", "d": "Pirgon White marble is a white dolomitic fine crystalline marble characterized by the presence of grey veins and spots throughout its surface. Its elegant appearance makes it a perfect choice on many construction uses.", "tech": ["2830", "0.9", "0.3", "4.6", "164", "Calcite 8, dolomite 92"], "m": [0.98, 0.98, 0.976, 0.86, 0.86, 0.87, 0.65, 0.5, 0.5, 0.52, 0.5, 0.6, 0.6, 0.61, 0.32, 0, 0, 0, 0], "t": "White, grey veins and spots", "b": "2026/11/pirgon-white", "s": "pirgon-white", "e": "A fine-grained white with grey veins and spots."}, {"n": "Polaris", "d": "Polaris is a fine-grained white dolomitic marble with diagonal grey veining. It is suitable for any decorative and construction use, offering interesting decorative solutions. Its beauty stands out even more from the impressive color combinations when coupled with other marbles.", "tech": ["2840", "0.4", "0.2", "7.4", "157", "Calcite 9, dolomite 91"], "m": [0.965, 0.966, 0.968, 0.88, 0.885, 0.89, 0.45, 0.5, 0.51, 0.53, 0.62, 0.68, 0.68, 0.7, 0.15, 0, 0, 0, 0], "t": "Pale, grey streaks", "b": "2023/05/polaris", "s": "polaris", "e": "Pale and fine-grained, crossed by slanting grey streaks."}, {"n": "Volakas", "d": "Volakas is a white background marble with diagonal brownish, grey veins and clouds, creating a sense of movements all harmonically combined to convey a unique and distinctive identity. Perfect for all kind of interior applications, both contemporary and classic. It creates beautiful Vein-match and Book-match presentations.", "tech": ["2840", "0.7", "0.2", "6.3", "185", "Calcite 8, dolomite 92"], "m": [0.976, 0.973, 0.966, 0.872, 0.868, 0.86, 1, 0.33, 0.33, 0.35, 0.78, 0.74, 0.58, 0.42, 0.55, 0, 0, 0, 0], "t": "White, brown and grey veins", "b": "2023/05/volakas-classic", "s": "volakas", "e": "White, with diagonal brown and grey veins and soft clouds."}, {"n": "Kavala", "d": "Kavala Semi-White is a fine-grained dolomitic marble, known for its white background and cool grey tones, with grey shades and clouds, all combined harmonically to convey a unique and distinctive identity. It is a versatile material with a uniform background, ideal for extraordinarily elegant and stunning results.", "tech": ["2710", "0.3", "0.1", "10.8", "87", "Calcite 3, dolomite 92, quartz 5"], "m": [0.935, 0.94, 0.95, 0.72, 0.75, 0.78, 1, 0.55, 0.57, 0.6, 0.16, 0.7, 0.72, 0.75, 0.1, 0, 0, 0, 0], "t": "White and cool grey", "b": "2026/11/kavala", "s": "kavala", "e": "A white ground beneath cool grey shades and clouds."}, {"n": "Kavala Vein", "d": "Kavala Semi-White Vein is a fine-grained off-white dolomitic marble, known for its diagonal grey veins. and spots. It is suitable for any decorative and construction use, offering impressive color combinations when incorporated with other marbles.", "tech": ["2710", "0.3", "0.1", "10.8", "87", "Calcite 3, dolomite 92, quartz 5"], "m": [0.95, 0.955, 0.96, 0.8, 0.82, 0.84, 0.6, 0.48, 0.5, 0.53, 0.66, 0.62, 0.64, 0.67, 0.3, 0, 0, 0, 0], "t": "Near white, grey streaks", "b": "2026/11/kavala-vein", "s": "kavala-vein", "e": "Near white, with slanted grey streaks and fine spots."}, {"n": "Crystalina", "d": "Crystalina is a dolomitic marble featuring a luminous white background with distinctive contrasting grey clouds. Its unique natural patterns create a sophisticated appearance, while its timeless elegance and luxurious character remain truly captivating.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.79, 0.8, 0.82, 1, 0.6, 0.6, 0.62, 0.08, 0.75, 0.75, 0.76, 0.05, 0, 0, 0, 0], "t": "White, grey clouds", "b": "2026/11/crystalina", "s": "crystalina", "e": "Bright white, with soft grey clouds drifting across it."}, {"n": "Crystalina Vein", "d": "Crystalina Vein is a dolomitic marble featuring a luminous white background crossed by vivid, contrasting diagonal grey veins. Its striking natural patterns create a sophisticated appearance, combining timeless elegance with a distinctive sense of luxury.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.88, 0.88, 0.89, 0.5, 0.3, 0.31, 0.34, 0.92, 0.55, 0.56, 0.58, 0.3, 0, 0, 0, 0], "t": "White, bold grey streaks", "b": "2026/11/crystalina-vein", "s": "crystalina-vein", "e": "Bright white, cut by bold slanting grey streaks."}, {"n": "Nestos", "d": "Nestos is a distinctive marble featuring a creamy-grey background with elegant horizontal bands in shades of beige, grey and soft pink. Its characteristic linear patterns create a harmonious appearance, combining natural beauty with timeless sophistication.", "tech": ["2700", "0.6", "0.2", "16", "112", "Calcite 97, dolomite 1, quartz 2"], "m": [0.87, 0.84, 0.8, 0.74, 0.73, 0.72, 0.7, 0.6, 0.58, 0.56, 0.3, 0.72, 0.68, 0.64, 0.15, 0.86, 0.71, 0.67, 0.62], "t": "Cream grey, banded", "b": "2026/11/nestos", "s": "nestos", "e": "Creamy grey, banded in beige, grey and soft pink."}, {"n": "Perla", "d": "Perla is a fine-grained limestone featuring a soft cream-beige background with subtle grey and brown fossil patterns. Its delicate crystal formations and natural textures create a refined appearance, offering timeless elegance and understated luxury.", "tech": ["2610", "3.3", "1.1", "13", "92", "Calcite 7, dolomite 93"], "m": [0.935, 0.905, 0.845, 0.885, 0.845, 0.775, 0.6, 0.6, 0.58, 0.55, 0.1, 0.62, 0.52, 0.42, 0.28, 0, 0, 0, 0], "t": "Pale cream limestone", "b": "2026/11/perla", "s": "perla", "e": "Pale cream limestone with faint fossil traces."}, {"n": "Vratsa", "d": "Vratsa marble is a statement of purity and neutrality adjusted by Mother Nature to accentuate your interior decoration items with finesse. Vratsa marble features great aesthetic uniformity, both in color and in pattern along with its physical characteristics. It is a stone sedate in its warm cream colors, varying between light ivory and natural beige tones.", "tech": ["2370", "2.7", "3.2", "14", "120", "Calcite 92, quartz 8"], "m": [0.935, 0.895, 0.805, 0.865, 0.805, 0.695, 0.6, 0.7, 0.62, 0.5, 0.06, 0.76, 0.67, 0.53, 0.16, 0, 0, 0, 0], "t": "Warm cream", "b": "2026/11/vratsa", "s": "vratsa", "e": "Warm cream, from light ivory to natural beige."}, {"n": "Aliveri", "d": "Aliveri is a fine-grained calcite marble featuring a deep dark grey background crossed by distinctive white and light grey veins. Its solid structure and low porosity create a striking appearance, combining natural character with timeless elegance and versatility.", "tech": ["2710", "0.5", "0.10", "15", "95", "Calcite 96, dolomite 2, quartz 2"], "m": [0.2, 0.21, 0.23, 0.3, 0.31, 0.33, 0.8, 0.93, 0.93, 0.94, 0.88, 0.7, 0.71, 0.73, 0.5, 0, 0, 0, 0], "t": "Dark grey, white veins", "b": "2026/11/aliveri", "s": "aliveri", "e": "Deep dark grey, veined in white and light grey."}];
+  const PRODUCTS = [{"n": "Thassos White", "d": "Thassos White is the world’s whitest marble. Its unique, refined character and sense of elegancy derives from its uniform, highly shiny total white surface. A fined-grained marble with high bright, crystalline color and high solar reflectance. Suitable for both exterior and interior applications.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.95, 0.95, 0.95, 0.35, 0.6, 0.6, 0.62, 0, 0.75, 0.75, 0.75, 0.04, 0, 0, 0, 0], "t": "Pure white", "b": "2026/11/thassos-white", "s": "thassos-white", "e": "A white of rare purity, luminous as first light."}, {"n": "Thassos Vein", "d": "Thassos Vein is a pure snow-white marble distinguished by subtle light grey veins. Its delicate natural patterns enhance its luminous appearance, creating a timeless sense of elegance and understated luxury.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.93, 0.93, 0.94, 0.35, 0.6, 0.61, 0.63, 0.32, 0.75, 0.75, 0.76, 0.1, 0, 0, 0, 0], "t": "White, faint grey veins", "b": "2026/11/thassos-vein", "s": "thassos-vein", "e": "Snow-white calm, crossed by the faintest breath of grey."}, {"n": "Thassos Prinos", "d": "Thassos Prinos is a white marble with contrasting grey veins and details. Coming from the same quarries as the world famous Thassos White Marble, it is an excellent solution for many construction needs.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.975, 0.975, 0.972, 0.85, 0.855, 0.86, 0.75, 0.44, 0.45, 0.47, 0.62, 0.6, 0.6, 0.62, 0.25, 0, 0, 0, 0], "t": "White, grey veins", "b": "2026/11/thassos-prinos", "s": "thassos-prinos", "e": "Radiant white, softly shadowed by veins of silver grey."}, {"n": "Thassos Radix", "d": "Thassos Radix is a rare variation of the world famous Thassos marble. Its unique appearance rises from its golden veins that resemble tree roots. Every Book-match presentation of Thassos Spider, is a unique work of art.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.95, 0.94, 0.92, 0.4, 0.72, 0.52, 0.22, 0.85, 0.82, 0.64, 0.3, 0.7, 0, 0, 0, 0], "t": "White, gold veins", "b": "2026/11/thassos-radix", "s": "thassos-radix", "e": "Rare white, laced with veins of gold that branch like living roots."}, {"n": "Pirgon", "d": "Pirgon is a dolomitic material with bright white background. Its uniqueness lies in its beautiful brownish and grayish veins, clouds and impressive arabesque motifs. Its technical properties and pattern ensure that the material can be used with ease in any interior applications, providing multiple color combinations and stunning results.", "tech": ["2830", "0.9", "0.3", "5", "164", "Calcite 8, dolomite 92"], "m": [0.978, 0.976, 0.97, 0.84, 0.84, 0.85, 0.95, 0.42, 0.4, 0.4, 0.72, 0.62, 0.48, 0.36, 0.6, 0, 0, 0, 0], "t": "White, brown and grey veins", "b": "2026/11/pirgon", "s": "pirgon", "e": "Brilliant white, where bronze and grey veins drift into clouds and arabesques."}, {"n": "Pirgon White", "d": "Pirgon White marble is a white dolomitic fine crystalline marble characterized by the presence of grey veins and spots throughout its surface. Its elegant appearance makes it a perfect choice on many construction uses.", "tech": ["2830", "0.9", "0.3", "4.6", "164", "Calcite 8, dolomite 92"], "m": [0.98, 0.98, 0.976, 0.86, 0.86, 0.87, 0.65, 0.5, 0.5, 0.52, 0.5, 0.6, 0.6, 0.61, 0.32, 0, 0, 0, 0], "t": "White, grey veins and spots", "b": "2026/11/pirgon-white", "s": "pirgon-white", "e": "A fine, quiet white, lightly touched with grey."}, {"n": "Polaris", "d": "Polaris is a fine-grained white dolomitic marble with diagonal grey veining. It is suitable for any decorative and construction use, offering interesting decorative solutions. Its beauty stands out even more from the impressive color combinations when coupled with other marbles.", "tech": ["2840", "0.4", "0.2", "7.4", "157", "Calcite 9, dolomite 91"], "m": [0.965, 0.966, 0.968, 0.88, 0.885, 0.89, 0.45, 0.5, 0.51, 0.53, 0.62, 0.68, 0.68, 0.7, 0.15, 0, 0, 0, 0], "t": "Pale, grey streaks", "b": "2023/05/polaris", "s": "polaris", "e": "Pale as northern light, swept by slanting strokes of grey."}, {"n": "Volakas", "d": "Volakas is a white background marble with diagonal brownish, grey veins and clouds, creating a sense of movements all harmonically combined to convey a unique and distinctive identity. Perfect for all kind of interior applications, both contemporary and classic. It creates beautiful Vein-match and Book-match presentations.", "tech": ["2840", "0.7", "0.2", "6.3", "185", "Calcite 8, dolomite 92"], "m": [0.976, 0.973, 0.966, 0.872, 0.868, 0.86, 1, 0.33, 0.33, 0.35, 0.78, 0.74, 0.58, 0.42, 0.55, 0, 0, 0, 0], "t": "White, brown and grey veins", "b": "2023/05/volakas-classic", "s": "volakas", "e": "Timeless white, crossed by veins of bronze and grey beneath soft clouds."}, {"n": "Kavala", "d": "Kavala Semi-White is a fine-grained dolomitic marble, known for its white background and cool grey tones, with grey shades and clouds, all combined harmonically to convey a unique and distinctive identity. It is a versatile material with a uniform background, ideal for extraordinarily elegant and stunning results.", "tech": ["2710", "0.3", "0.1", "10.8", "87", "Calcite 3, dolomite 92, quartz 5"], "m": [0.935, 0.94, 0.95, 0.72, 0.75, 0.78, 1, 0.55, 0.57, 0.6, 0.16, 0.7, 0.72, 0.75, 0.1, 0, 0, 0, 0], "t": "White and cool grey", "b": "2026/11/kavala", "s": "kavala", "e": "A white ground, veiled in cool grey mist."}, {"n": "Kavala Vein", "d": "Kavala Semi-White Vein is a fine-grained off-white dolomitic marble, known for its diagonal grey veins. and spots. It is suitable for any decorative and construction use, offering impressive color combinations when incorporated with other marbles.", "tech": ["2710", "0.3", "0.1", "10.8", "87", "Calcite 3, dolomite 92, quartz 5"], "m": [0.95, 0.955, 0.96, 0.8, 0.82, 0.84, 0.6, 0.48, 0.5, 0.53, 0.66, 0.62, 0.64, 0.67, 0.3, 0, 0, 0, 0], "t": "Near white, grey streaks", "b": "2026/11/kavala-vein", "s": "kavala-vein", "e": "Near white, brushed with slanting lines of grey, fine as rain."}, {"n": "Crystalina", "d": "Crystalina is a dolomitic marble featuring a luminous white background with distinctive contrasting grey clouds. Its unique natural patterns create a sophisticated appearance, while its timeless elegance and luxurious character remain truly captivating.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.79, 0.8, 0.82, 1, 0.6, 0.6, 0.62, 0.08, 0.75, 0.75, 0.76, 0.05, 0, 0, 0, 0], "t": "White, grey clouds", "b": "2026/11/crystalina", "s": "crystalina", "e": "Crystalline white, where soft grey clouds drift at ease."}, {"n": "Crystalina Vein", "d": "Crystalina Vein is a dolomitic marble featuring a luminous white background crossed by vivid, contrasting diagonal grey veins. Its striking natural patterns create a sophisticated appearance, combining timeless elegance with a distinctive sense of luxury.", "tech": ["2840", "0.4", "0.14", "10", "87", "Calcite 12, dolomite 86, quartz 2"], "m": [0.985, 0.985, 0.98, 0.88, 0.88, 0.89, 0.5, 0.3, 0.31, 0.34, 0.92, 0.55, 0.56, 0.58, 0.3, 0, 0, 0, 0], "t": "White, bold grey streaks", "b": "2026/11/crystalina-vein", "s": "crystalina-vein", "e": "Crystalline white, struck through with bold strokes of grey."}, {"n": "Nestos", "d": "Nestos is a distinctive marble featuring a creamy-grey background with elegant horizontal bands in shades of beige, grey and soft pink. Its characteristic linear patterns create a harmonious appearance, combining natural beauty with timeless sophistication.", "tech": ["2700", "0.6", "0.2", "16", "112", "Calcite 97, dolomite 1, quartz 2"], "m": [0.87, 0.84, 0.8, 0.74, 0.73, 0.72, 0.7, 0.6, 0.58, 0.56, 0.3, 0.72, 0.68, 0.64, 0.15, 0.86, 0.71, 0.67, 0.62], "t": "Cream grey, banded", "b": "2026/11/nestos", "s": "nestos", "e": "Cream and grey in gentle bands, warmed by a blush of rose."}, {"n": "Perla", "d": "Perla is a fine-grained limestone featuring a soft cream-beige background with subtle grey and brown fossil patterns. Its delicate crystal formations and natural textures create a refined appearance, offering timeless elegance and understated luxury.", "tech": ["2610", "3.3", "1.1", "13", "92", "Calcite 7, dolomite 93"], "m": [0.935, 0.905, 0.845, 0.885, 0.845, 0.775, 0.6, 0.6, 0.58, 0.55, 0.1, 0.62, 0.52, 0.42, 0.28, 0, 0, 0, 0], "t": "Pale cream limestone", "b": "2026/11/perla", "s": "perla", "e": "Pearl-cream stone, holding the faint memory of ancient seas."}, {"n": "Vratsa", "d": "Vratsa marble is a statement of purity and neutrality adjusted by Mother Nature to accentuate your interior decoration items with finesse. Vratsa marble features great aesthetic uniformity, both in color and in pattern along with its physical characteristics. It is a stone sedate in its warm cream colors, varying between light ivory and natural beige tones.", "tech": ["2370", "2.7", "3.2", "14", "120", "Calcite 92, quartz 8"], "m": [0.935, 0.895, 0.805, 0.865, 0.805, 0.695, 0.6, 0.7, 0.62, 0.5, 0.06, 0.76, 0.67, 0.53, 0.16, 0, 0, 0, 0], "t": "Warm cream", "b": "2026/11/vratsa", "s": "vratsa", "e": "Warm ivory deepening to beige, serene from edge to edge."}, {"n": "Aliveri", "d": "Aliveri is a fine-grained calcite marble featuring a deep dark grey background crossed by distinctive white and light grey veins. Its solid structure and low porosity create a striking appearance, combining natural character with timeless elegance and versatility.", "tech": ["2710", "0.5", "0.10", "15", "95", "Calcite 96, dolomite 2, quartz 2"], "m": [0.2, 0.21, 0.23, 0.3, 0.31, 0.33, 0.8, 0.93, 0.93, 0.94, 0.88, 0.7, 0.71, 0.73, 0.5, 0, 0, 0, 0], "t": "Dark grey, white veins", "b": "2026/11/aliveri", "s": "aliveri", "e": "Midnight grey, lit by veins of white."}];
   const TECH = ['Apparent density (kg/m²)', 'Open porosity (%)', 'Water absorption (%)', 'Flexural strength (MPa)', 'Compressive strength (MPa)', 'Composition (%)'];
   const UPLOADS = 'https://kouklas.gr/wp-content/uploads/';
   const DEFAULT = 1; // Thassos Vein
@@ -1337,7 +1416,7 @@
     const at = ORDER.indexOf(i);
     for (const [id, j] of [['#p-prev', ORDER[(at + n - 1) % n]], ['#p-next', ORDER[(at + 1) % n]]]) {
       const a = $(id);
-      a.href = '#product/' + PRODUCTS[j].s;
+      a.href = '#/product/' + PRODUCTS[j].s;
       $('b', a).textContent = PRODUCTS[j].n;
     }
   }
@@ -1345,7 +1424,7 @@
   // project pages: the details are read from the cards on the Projects page
   const PROJECTS = [...document.querySelectorAll('.jcard')].map(li => {
     const mat = $('.jmat a', li);
-    return { s: li.dataset.slug, n: $('.jname', li).textContent, loc: $('.jloc', li).textContent, img: li.dataset.img, m: PRODUCTS.findIndex(p => '#product/' + p.s === mat.getAttribute('href')) };
+    return { s: li.dataset.slug, n: $('.jname', li).textContent, loc: $('.jloc', li).textContent, img: li.dataset.img, m: PRODUCTS.findIndex(p => '#/product/' + p.s === mat.getAttribute('href')) };
   });
   const jImg = $('#j-img'), jSwatch = $('#j-swatch');
   let shownProject = -1;
@@ -1373,13 +1452,13 @@
     $('#j-loc').textContent = J.loc;
     jImg.hidden = true;
     if (J.img) jImg.src = J.img; else jImg.removeAttribute('src');
-    $('#j-marble').href = '#product/' + M.s;
+    $('#j-marble').href = '#/product/' + M.s;
     $('#j-marble-name').textContent = M.n;
     $('#j-marble-line').textContent = M.e;
     drawProjectSwatch();
     for (const [id, j] of [['#j-prev', (i + n - 1) % n], ['#j-next', (i + 1) % n]]) {
       const a = $(id);
-      a.href = '#project/' + PROJECTS[j].s;
+      a.href = '#/project/' + PROJECTS[j].s;
       $('b', a).textContent = PROJECTS[j].n;
     }
   }
@@ -1440,8 +1519,29 @@
 
   $('.totop').addEventListener('click', () => scrollTo({ top: 0, behavior: reduce ? 'instant' : 'smooth' }));
 
+  /* ---------- figures count up when they come into view ---------- */
+  const counters = [...document.querySelectorAll('[data-count]')];
+  const fmt = n => Math.round(n).toLocaleString('en-US');
+  function runCount(el) {
+    const end = +el.dataset.count, t0 = performance.now(), dur = 1600;
+    const step = now => {
+      const k = Math.min(1, (now - t0) / dur);
+      el.textContent = fmt(end * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting && !e.target._counted) { e.target._counted = true; runCount(e.target); }
+    }), { threshold: 0.6 });
+    counters.forEach(el => io.observe(el));
+  }
+  // opening the About page again replays the count
+  const resetCounters = () => { if (!reduce) counters.forEach(el => { el._counted = false; el.textContent = '0'; }); };
+
   /* ---------- pages: the address after "#" picks the page ---------- */
-  const TITLES = { home: 'Kouklas Marble | Greek marble supplier', about: 'About', collection: 'Collection', projects: 'Projects', contact: 'Contact us' };
+  const TITLES = { home: 'Kouklas Marble | Greek marble supplier', about: 'About', collection: 'Collection', projects: 'Projects', contact: 'Contact us', terms: 'Terms of use', privacy: 'Privacy policy' };
   const topEl = $('.top'), menuBtn = $('.menu');
   menuBtn.addEventListener('click', () => {
     menuBtn.setAttribute('aria-expanded', String(topEl.classList.toggle('open')));
@@ -1456,21 +1556,32 @@
       const i = PROJECTS.findIndex(j => j.s === h.slice(8));
       return i >= 0 ? { view: 'projects', j: i } : { view: 'projects' };
     }
-    return { view: ['about', 'collection', 'projects', 'contact'].includes(h) ? h : 'home' };
+    return { view: ['about', 'collection', 'projects', 'contact', 'terms', 'privacy'].includes(h) ? h : 'home' };
   }
   const jd = $('#project');
   // closing the window keeps the Projects page where it was scrolled
-  const leaveProject = () => { if (location.hash.startsWith('#project/')) { history.pushState(null, '', '#projects'); applyView(); } };
+  const leaveProject = () => { if (route().j !== undefined) { history.pushState(null, '', '#/projects'); applyView(); } };
   jd.addEventListener('close', leaveProject);
   jd.addEventListener('click', e => { if (e.target === jd || e.target.closest('.jd-close')) jd.close(); });
   let current = {};
+  // every history entry remembers how far down its page was scrolled, so Back and Forward return to that spot
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  const scrolls = {};
+  let entryKey = null;
+  addEventListener('scroll', () => { if (entryKey !== null) scrolls[entryKey] = scrollY; }, { passive: true });
   function applyView() {
     const r = route();
+    let st = history.state;
+    const returning = !!(st && st.k);          // an entry we have been to before: Back or Forward
+    if (!returning) { st = { k: Date.now() + Math.random() }; history.replaceState(st, ''); }
+    const here = scrollY;
+    entryKey = st.k;
     // a project opens as a window over the Projects page
     if (r.j !== undefined) { fillProject(r.j); if (!jd.open) jd.showModal(); jd.scrollTop = 0; }
     else if (jd.open) jd.close();
     if (r.view === current.view && r.i === current.i) {
       current = r;
+      scrolls[entryKey] = here;   // same page (a project window opening or closing): stay put
       if (r.view === 'projects') document.title = (r.j !== undefined ? PROJECTS[r.j].n : 'Projects') + ' | Kouklas Marble';
       return;
     }
@@ -1485,12 +1596,13 @@
     if (r.j !== undefined) document.title = PROJECTS[r.j].n + ' | Kouklas Marble';
     if (r.view === 'product') { fillProduct(r.i); applyMaterial(r.i, true); }
     if (r.view === 'home') applyMaterial(DEFAULT, true);
+    if (r.view === 'about') resetCounters();
     if (r.view === 'contact' && quoteFor) {
       const m = form.elements.message;
       if (!m.value.trim()) m.value = 'I am interested in ' + quoteFor + '.';
     }
     quoteFor = '';
-    scrollTo({ top: 0, behavior: 'instant' });
+    scrollTo({ top: returning ? (scrolls[entryKey] || 0) : 0, behavior: 'instant' });
     measureRises();
     if (r.view === 'home' || r.view === 'product') onHome();
     updateRises(); updateTape();
